@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body,html{
+            height: 1000%;
+            background: green;
+            background: -webkit-linear-gradient(top,lightsalmon,lightgoldenrodyellow,lightblue,lightslategray);
+        }
+        *{
+            margin:0;
+            padding: 0;
+        }
+        div{
+            width: 80px;
+            height: 80px;
+            text-align: center;
+            line-height: 80px;
+            font-size: 30px;
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: 4px 4px 10px darkGreen;
+            position: fixed;
+            right:10px;
+            bottom:30px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">toTop</div>
+<script src="utils.js"></script>
+<script>
+    //鼠标滚轮滑动，停止运动
+    //点击按钮的时候让按钮立即消失
+    var oDiv=document.getElementById('div1');
+    window.onscroll=computedDisplay;
+    function computedDisplay(){
+        if(utils.win('scrollTop')>utils.win('clientHeight')){
+            oDiv.style.display='block';
+        }else{
+            oDiv.style.display='none';
+        }
+    }
+    oDiv.onclick=function(){
+        this.style.display='none';
+        window.onscroll=null;
+        var target=utils.win('scrollTop');
+        var duration=1000;
+        var interval=30;
+        var step=target/duration*interval;
+        var timer=setInterval(function(){
+            var curTop=utils.win('scrollTop');
+            if(curTop<=0){
+                clearInterval(timer);
+                window.onscroll=computedDisplay;
+                return;
+            }
+            curTop-=step;
+            utils.win('scrollTop',curTop);
+        },interval)
+    }
+</script>
+</body>
+</html>

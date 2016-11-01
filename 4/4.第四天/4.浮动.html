@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding:0;
+            margin: 0;
+        }
+        ul{
+            list-style: none;
+            /*height: 400px;*/
+            /*float: left;*/
+        }
+        li,span{
+            width: 200px;
+            height: 200px;
+            background:red ;
+            text-align: center;
+            margin: 0 0 10px 10px;
+            float: left;
+            font-size: 30px;
+            color: white;
+        }
+        span{
+            background: blue;
+        }
+        .clearfix:after{
+            /*:after 在元素里最末尾加上内容*/
+            content:'';
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body style="height: 3000px">
+（行内元素只可以设置水平方向的margin padding）
+
+float：left  左浮动 从左开始 从第一个盒子依次往右排列
+float：right  右浮动 从右开始 从第一盒子依次往左排列
+
+浮动的元素特点：
+可以设置宽度和高度，在不设置宽度和高度的情况下，宽度是自身内容的宽度，高度是自身内容的高度，可是设置margin padding
+
+<ul style="background: yellow" class="clearFix">
+    <li>我是第1个盒子</li>
+    <li>我是第2个盒子</li>
+    <li>我是第3个盒子</li>
+    <li>我是第4个盒子</li>
+    <!-- 清除浮动：清除浮动的元素对其他元素造成的影响-->
+    <!--<p style="clear: both"></p>-->
+</ul>
+<p>清除浮动：清除浮动的元素对其他元素造成的影响</p>
+
+<span>我是第1个盒子</span>
+<span>我是第2个盒子</span>
+<span>我是第3个盒子</span>
+<span>我是第4个盒子</span>
+<div style="width: 800px;height: 300px;background: purple"></div>
+
+
+
+
+
+</body>
+</html>

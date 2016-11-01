@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box{
+            width: 200px;
+            height: 80px;
+            border: 2px solid blue;
+            position: relative;
+        }
+        .hide{
+            width: 300px;
+            height: 0px;
+            background: yellow;
+            position: absolute;
+            top:82px;
+            left: 0;
+            overflow: hidden;
+        }
+        .box:hover .hide{
+            height: 100px;
+            transition: all .8s;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="hide">隐藏的盒子</div>
+</div>
+<style>
+    *{margin: 0;padding: 0}
+    a{
+        text-decoration: underline;
+    }
+
+    ul{
+        list-style: none;
+    }
+    ul{
+        width: 234px;
+        height: 170px;
+        background: #5f5750;
+    }
+    ul li{
+        width: 76px;
+        height: 82px;
+        float: left;
+        position: relative;
+    }
+    /*ul li i{
+        width: 64px;
+        height: 1px;
+        background: #fff;
+        position: absolute;
+        top:0;
+        left: 6px;
+    }*/
+   /* ul li b{
+        width: 1px;
+        height: 70px;
+        background: #fff;
+        position: absolute;
+        top:6px;
+        left: 0;
+    }*/
+    ul li.top i{
+        display: none;
+    }
+    ul li.left b{
+        display: none;
+    }
+    ul li:before{
+        content: '';
+        display: block;
+        width: 64px;
+        height: 1px;
+        background: #fff;
+        position: absolute;
+        top:0;
+        left: 6px;
+
+    }
+    ul li:after{
+        content: '';
+        display: block;
+        width: 1px;
+        height: 70px;
+        background: #fff;
+        position: absolute;
+        top:6px;
+        left: 0;
+    }
+    ul li.top:before{
+        display: none;
+    }
+    ul li.left:after{
+        display: none;
+    }
+</style>
+<ul class="content">
+    <li class="top left">
+    </li>
+    <li class="top">
+
+    </li>
+    <li class="top">
+
+    </li>
+    <li class="left">
+
+    </li>
+    <li>
+
+    </li>
+    <li>
+
+    </li>
+</ul>
+</body>
+</html>

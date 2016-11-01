@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var strDate='2016-6-23 17:26:30';
+    //思路2：
+    var ary=strDate.match(/\d+/g);
+    //思路1：严格匹配
+    /*var ary=[];
+    var reg=/^(\d{4})[-/](\d{1,2})[-/](\d{1,2}) (\d{1,2}):(\d{1,2}):(\d{1,2})$/;
+    strDate.replace(reg,function(){
+        //console.log(arguments)
+        //ary=Array.prototype.slice.call(arguments,1,arguments.length-2)
+        ary=Array.prototype.slice.call(arguments,1,7)
+    })*/
+    var str='{0}年{1}月{2}日 {3}时{4}分{5}秒';
+    /*var ary=['2016','6','23','17','2','0'];*/
+    str=str.replace(/{(\d+)}/g,function(){
+        //console.log(arguments)
+        var num=ary[arguments[1]];
+        num=num>=0&&num<10?'0'+num:num;
+        return num;
+    })
+</script>
+</body>
+</html>

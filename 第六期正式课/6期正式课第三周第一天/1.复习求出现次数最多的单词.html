@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //需求：求出现次数最多的字母，以及出现多少次
+    /*
+    * 1.利用对象不重名的特性；{a:7,s:7,c:3....}
+    * 2.遍历对象求出最多的次数--假设法
+    * 3.遍历对象求出最多次数对应的n个属性名；
+    *
+    * */
+    var str='sssBbsbbssSAAccACcCCcAA';
+    var obj={};
+    str.replace(/[a-z]/gi,function(){
+        var cur=arguments[0].toLowerCase();
+        if(obj[cur]){
+            obj[cur]++;
+        }else{//第一次查找某个obj的属性时，肯定没有--，undefined;
+            obj[cur]=1;//
+        }
+    })
+    var num=0;
+    var ary=[];
+    for(var attr in obj){
+        if(obj[attr]>num){
+            num=obj[attr];
+        }
+    }
+    for(var attr in obj){
+        if(obj[attr]===num){
+            ary.push(attr)
+        }
+    }
+
+</script>
+</body>
+</html>

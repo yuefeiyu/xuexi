@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        p{
+            /*background: red;*/
+            /*text-align: center;*/
+            /*display: inline-block;*/
+            /*width: 500px;*/
+        }
+    </style>
+</head>
+<body style="height: 3000px">
+<!--
+1）文字，img，input行内元素水平居中
+text-align: center;
+---只能作用于块级元素 行内块级元素（必须定义width）
+-->
+<p><input type="text"/></p>
+<!--
+2）单行文字等行内元素垂直居中
+height: 100px;
+line-height: 100px;
+-->
+<style>
+    .art{
+        background: yellow;
+        height: 100px;
+        line-height: 100px;
+    }
+</style>
+<p class="art">我是一个段落</p>
+
+<!--
+3)大结构水平居中显示
+margin：0 auto
+-->
+<div style="width: 300px;background: blue;height: 100px;margin: 0 auto"></div>
+
+<!--
+4)绝对居中（上下居中 左右居中）
+-->
+<style>
+
+    .center{
+        background: black;
+        width: 600px;
+        height: 400px;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        margin-left: -300px;
+        margin-top: -200px;
+    }
+</style>
+<div class="center"></div>
+
+<style>
+    .parent{
+        width: 300px;
+        height: 200px;
+        background: yellow;
+        position: relative;
+
+    }
+    .child{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 100px;
+        height: 100px;
+        background: red;
+    }
+</style>
+<div class="parent">
+    <div class="child"></div>
+</div>
+
+<!--
+5)
+行内块级元素设置vertical-align:middle
+-->
+<style>
+    div img{
+        /*vertical-align: middle;*/
+        vertical-align: -39px;
+    }
+</style>
+<div>
+    <span>文字</span>
+    <img src="jd.jpg" alt=""/>
+    <span>文字</span>
+</div>
+
+
+</body>
+</html>

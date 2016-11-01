@@ -1,0 +1,176 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "microsoft yahei";
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    border: none;
+    display: block;
+}
+.clearfix:before,.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.header{
+    width: 950px;
+    height: 32px;
+    margin-top: 30px;
+    border-bottom: 3px solid #eceef4;
+}
+h3{
+    font-size: 18px;
+    color: #333333;
+    width: 230px;
+    padding-left: 10px;
+    float: left;
+}
+.nav{
+    float: left;
+}
+.nav li{
+    float: left;
+    padding: 0 5px;
+    margin-right: 18px;
+}
+.nav li:hover{
+    border-bottom: 3px solid #517ac0;
+    padding-bottom: 11px;
+}
+.nav li a{
+    font-size: 14px ;
+    color: #222222;
+}
+.nav li a:hover{
+    color: #517ac0;
+}
+.more{
+    float: right;
+    font-size: 12px;
+    color: #999999;
+    padding-top: 5px;
+}
+.container{
+    margin-top: 15px;
+    width: 950px;
+}
+.conL{
+    width: 223px;
+    float: left;
+}
+.conL h4{
+    font-size: 14px;
+    color: #222222;
+    padding-left: 10px;
+}
+.conL ul{
+    padding-left: 10px;
+    width: 205px;
+    padding-bottom: 7px;
+    border-bottom: 1px dotted #d7d7d7;
+}
+.conL ul li{
+    float: left;
+    width: 101px;
+    line-height: 24px;
+}
+.conL ul li span{
+    color: #c0c0c0;
+}
+.conL ul li a{
+    color: #333333;
+    font-size: 12px;
+}
+.conL ul li a:hover{
+    color: #ff6600;
+}
+.conL img{
+    width: 225px;
+    height: 205px;
+}
+.conR{
+    width: 726px;
+    float: right;
+}
+.conR li{
+    float: left;
+    width: 225px;
+    position: relative;
+    padding-bottom: 13px;
+    margin-bottom: 20px;
+    margin-left: 17px;
+}
+.conR li:hover{
+    box-shadow:0 2px 5px #ff6600;
+    /*
+        第一个值  正数：右  负数 ：左
+        第二个值  正数：下  负数：上
+        第三个值  代表阴影扩散范围
+        第四个值  颜色
+
+        颜色:
+        rgba（0，0，0，.5）（透明度）
+        透明度只能是0到1之间的数
+        #000000（最常用 十六进制）  #000
+        #11aa22 --> #1a2
+        #1a1a1a --> #1a1a1a
+        black(尽量不用)
+        rgb（0，0，0）
+    */
+}
+.conR li img{
+    width: 225px;
+    height: 128px;
+}
+.conR li .disc{
+    position: absolute;
+    top:0;
+    right: 0;
+    font-size: 12px;
+    color: #ffffff;
+    background: #ffb536;
+    width: 64px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+}
+.conR li .info{
+    font-size: 12px;
+    color: #ffffff;
+    background: rgba(0,0,0,.5);
+    /*
+        0,0,0 三原色
+        .5透明度  0.5--.5
+    */
+    position: absolute;
+    left: 0;
+    top: 87px;
+    height: 34px;
+    line-height: 17px;
+    padding: 3px 5px 3px 5px;
+    overflow: hidden;
+}
+.conR li .price{
+    font-size: 12px;
+    color: #ff6600;
+}
+.conR li .price span{
+    font-size: 20px;
+    font-weight: bold;
+}
+.conR li .price s,.conR li .price i{
+    font-size: 12px;
+    color: #999999;
+}
+.conR li .price i{
+    font-style: normal;
+    float: right;
+    padding-top: 7px;
+}
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width: 400px;
+            height: 400px;
+            /*background: red;*/
+            border: 10px dotted yellow;
+            background:red url("images/2.jpg") no-repeat ;
+            /*width: 100%;*/
+            /*可是窗口的宽度*/
+            /*background-size: 100% 100%;*/
+            /*               宽度  高度*/
+            /*没有内容的行内元素 引入背景图片时 要设置宽度和高度 */
+            background-position: left top;
+            /*                   水平    竖直
+                                 center 居中
+            */
+            box-shadow: 0 10px 20px #000;
+            /*          （1） 左右  正  右
+                                  负  左
+                        （2）上下   正  下
+                                   负  上
+                        （3）扩散的范围
+                        （4）颜色
+
+                        #000000  ----#000
+                        #aabbcc  ----#abc
+                        #abcabc  ----#abcabc
+
+                        rgba(0,0,0,.5)
+                        rgb(0,0,0)
+
+             */
+
+
+        }
+        div:hover{
+            /*过渡效果 */
+            /*transition: all .3s;*/
+            height: 600px;
+            border: 1px solid yellow;
+            transition: all .3s;
+            /*
+            all  针对的所有的css属性
+            .3s  过渡效果持续的时间
+
+            */
+        }
+        /*  页面中经常不变的图片用 background-image
+            产品的图片，从数据库读取出的图片，经常变化的 在html中用img引入
+        */
+    </style>
+</head>
+<body>
+<div>
+    <img src="images/2.jpg" alt=""/>
+</div>
+
+
+</body>
+</html>

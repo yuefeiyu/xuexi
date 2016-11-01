@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var str='123zhufeng456peixun789'
+    //match功能：正则捕获字符串里面的内容，以一个新数组的形式返回；
+    String.prototype.myMatch=function(reg){
+        //this -字符串
+        var ary=[];
+        var res=reg.exec(this);//exec一次只能捕获到一个，这一个数组
+        //exec在没有小分组的情况，每次捕获到的这一个数组中有三项 1）大正则 2）索引 3）原始字符串；
+        while(res){
+            ary.push(res[0]);
+            res=reg.exec(this)
+        }
+        return ary;
+    }
+    var reg=/\d+/g;
+   console.log(str.myMatch(reg))  //[123,456]
+</script>
+</body>
+</html>

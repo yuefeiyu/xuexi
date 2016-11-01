@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+块级元素：
+独占一行
+在不设置宽度和高度的情况下，宽度是父级元素的宽度，高度是自身内容的高度
+
+<!--  h1~h6 标题标签-->
+<p>段落</p>
+<div>对结构的划分，相当于一个容器，用来区分内容和结构</div>
+<!--分割线-->
+<hr/>
+<!--表格-->
+<table border="1" width="800">
+    <caption>表格的标题</caption>
+    <!-- 表头-->
+    <thead>
+    <!-- tr 行-->
+        <tr>
+            <!-- 表头里的单元格-->
+            <!-- th  文字默认居中-->
+            <th>单元格</th>
+            <th>单元格</th>
+            <th>单元格</th>
+        </tr>
+    </thead>
+    <!-- 表身-->
+    <tbody>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+    </tbody>
+    <!-- 表尾-->
+    <tfoot>
+    <!-- tr 行-->
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+    </tfoot>
+</table>
+
+列表标签：ul，ol，li
+<!--ul无序列表-->
+ul>li*3
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<!--ul>li{选项$}*3-->
+<ul>
+    <li>选项1</li>
+    <li>选项2</li>
+    <li>选项3</li>
+</ul>
+<!--ol有序列表-->
+<!--ol>li{选项$}*3-->
+<ol>
+    <li>选项1</li>
+    <li>选项2</li>
+    <li>选项3</li>
+</ol>
+<!--
+    列表标签 用于格式结构相同 并且重复出现的内容
+-->
+<!--定义列表-->
+<dl>
+    <!-- dt名词/标题-->
+    <dt>名词</dt>
+    <!-- dd名词解释/内容-->
+    <dd>名词解释</dd>
+    <dt>名词</dt>
+    <dd>名词解释</dd>
+    <dt>名词</dt>
+    <dd>名词解释</dd>
+</dl>
+<form>
+    <!-- 对input标签的描述
+    lable中for的值和input值相同的时候，他们是关联的。
+    -->
+    <label for="name">用户名</label>
+    <!--文本框-->
+    <input type="text" id="name"/>
+    <!-- 密码框-->
+    <input type="password"/>
+    <!-- 普通按钮-->
+    <input type="button" value="登录"/>
+    <!-- 提交按钮-->
+    <input type="submit"/>
+</form>
+
+块级元素：h1~h6,div,p,table,thead,caption,tbody,tfoot,tr,td,ul,li,ol,dl,dt,dd form
+独占一行，在不设置宽度和高度的情况下  宽度是父级元素的宽度，高度是自身内容的高度
+
+
+
+</body>
+</html>

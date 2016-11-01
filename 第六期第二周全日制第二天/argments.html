@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var to = 0
+    function ad() {
+        for (var i = 0; i < arguments.length; i++) {
+            if (!isNaN(arguments[i])) {
+                to += Number(arguments[i])
+            }
+        }
+        return to;
+    }
+    var num = ad(1, 2, '3', '3px')
+    console.log(num)
+</script>
+
+</body>
+</html>

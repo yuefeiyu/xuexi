@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="box" id="box">
+    <div class=" box1       box2        box3 box4"></div>
+    <div class="box1 box2 box3"></div>
+    <div class="box1 box2"></div>
+    <div class="box1"></div>
+</div>
+<script src="utils.js"></script>
+<script>
+    var oDiv=document.getElementById('box');
+    var aDiv=oDiv.getElementsByTagName('div');
+    //var aBox=utils.getByClass(oDiv,'     box2')
+    console.log(utils.hasClass(aDiv[0],'     box2     '))
+    //console.log(utils.addClass(aDiv[1],'box1 box5'))
+    //getByClass:限定范围通过class名来获取元素
+    //1.拆数组 [box2,box3]
+    //2.当前这个元素下的所有元素的className
+    //3.保证每个元素的className一定既要有box2，还得有box3;这个元素才是合格的
+    /*function getByClass(curEle,strClass){
+        curEle=curEle||document;
+        //返回值是个数组
+        //高级浏览器和低级浏览器的判断
+        if('getComputedStyle' in window){//高级浏览器
+            return Array.prototype.slice.call(curEle.getElementsByClassName(strClass))
+        }
+        //低级浏览器的兼容处理
+        //把传进来的strClass切割成数组：1）去除首尾空格 2）通过正则（若干个空格）切成数组
+        var aryClass=strClass.replace(/(^ +)|( +$)/g,'').split(/\s+/g);
+        //获取当前元素下的所有元素节点
+        var nodeList=curEle.getElementsByTagName('*');
+        var ary=[];//保存以后取到的合格的标签
+        //遍历元素中的每一项，如果当前元素的className都包含我们aryClass中的每一项，那么，这个元素就是合格的，把它放入数组ary中；整个循环结束，返回数组；
+        for(var i=0; i<nodeList.length; i++){
+            var curNode=nodeList[i];
+            var bOk=true;
+            for(var k=0; k<aryClass.length; k++){
+                var curClass=aryClass[k];
+                var reg=new RegExp('(^| +)'+curClass+'( +|$)');
+                if(!reg.test(curNode.className)){
+                    bOk=false;
+                    break;
+                }
+            }
+            if(bOk){
+                ary[ary.length]=curNode;
+            }
+        }
+        return ary;
+
+    }*/
+</script>
+</body>
+</html>

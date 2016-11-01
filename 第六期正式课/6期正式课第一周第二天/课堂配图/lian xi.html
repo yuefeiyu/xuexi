@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function pon(name,age){
+        var obj={};
+        obj.name=name
+        obj.age=age
+        obj.show=function(){
+            alert("我的名字是"+this.name)
+        }
+        return obj
+    }
+    var p1=pon("岳飞宇",18)
+  p1.show()
+</script>
+</body>
+</html>

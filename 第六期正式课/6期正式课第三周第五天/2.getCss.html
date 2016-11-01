@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: red;
+            filter: alpha(opacity:10);
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+<script>
+    var oDiv=document.getElementById('div1');
+    css(oDiv,{
+        width:500,
+        background:'yellow',
+        opacity:0.5,
+        borderRadius:'50%',
+
+    })
+
+    var flag='getComputedStyle' in window;
+    //getCss 获取元素的非行间样式（能取到行间样式）
+    /*
+    * 1.判断高级浏览器-computedStyle
+    * 2.低级浏览器-obj.currentStyle
+    * 3.处理单位
+    * 4.处理透明度
+    * */
+    //setCss(oDiv,'width',400);
+     /*setCss(oDiv,'opacity','0.1');*/
+    //getCss:对象curEle 字符串
+    function getCss(curEle,attr){
+        var val,reg;
+        if(flag){
+            val=getComputedStyle(curEle,false)[attr];
+        }else{
+            if(attr==='opacity'){
+                val=curEle.currentStyle['filter'];//'alpha(opacity:10)'
+                reg=/^alpha\(opacity[:=](\d+)\)$/;
+                return reg.test(val)?RegExp.$1/100:1;
+            }else{
+                val=curEle.currentStyle[attr];
+            }
+
+        }
+        // +- 100.33px
+        reg=/^([+-])?\d+(\.\d+)?(px|pt|rem|em)$/;
+        return reg.test(val)?parseFloat(val):val;
+    }
+    //setCss:对象curEle 字符串 存在！==undefined
+    //setCss:设置行间样式:每次只能设置一个样式；
+    function setCss(curEle,attr,value){
+        //处理动态设置float问题
+        if(attr==='float'){
+            curEle.style.cssFloat=value;//火狐
+            curEle.style.styleFloat=value;//IE
+            return;
+        }
+        //处理的是透明度的问题
+        if(attr==='opacity'){
+            //高级浏览器的透明度处理
+            curEle.style.opacity=value;
+            //低级浏览器的透明度处理
+            curEle.style.filter='alpha(opacity='+value*100+')';
+            return;
+        }
+       //给谁的value传单位，取决于传进来的属性是否满足我们的正则
+        var reg=/width|height|top|right|bottom|left|((margin|padding)(top|right|bottom|left)?)/
+        if(reg.test(attr)){
+            value=parseFloat(value)+'px';
+        }
+        curEle.style[attr]=value;//核心：就是这句话
+    }
+    //setGroupCss：对象curEle  {key:value}
+    //setGroupCss:每次设置一组样式
+    function setGroupCss(curEle,options){
+        //要把对象options中的每组属性和属性值一一设置到元素的行间样式上；
+        for(var attr in options){
+            setCss(curEle,attr,options[attr]);
+        }
+    }
+    //css思路分析
+    //确定有的参数 第一个参数curEle
+    //不确定他是什么类型的参数 第二个参数
+        /*
+        * 1.如果第二个参数是个字符串的话：有两种情况
+        *   1）如果第三个参数不存在 --获取样式 getCss
+        *   2)如果第三个参数存在 --设置一个样式 setCss
+        *2.如果第二个参数是个对象的话：有且只有一种情况 ---设置一组样式setGroupCss
+        * */
+    function css(curEle){
+        var arg2=arguments[1];
+        //1.如果第二个参数是个字符串的话：有两种情况
+        if(typeof arg2==='string'){//getCss setCss
+            var arg3=arguments[2];
+            //1）如果第三个参数不存在 --获取样式 getCss
+            if(typeof arg3 === 'undefined'){//不存在
+                return getCss(curEle,arg2)
+            }else{//2)如果第三个参数存在 --设置一个样式 setCss
+                setCss(curEle,arg2,arg3)
+            }
+        }
+        //2.如果第二个参数是个对象的话：有且只有一种情况 ---设置一组样式setGroupCss
+        if(arg2.toString() ==='[object Object]'){
+            setGroupCss(curEle,arg2)
+        }
+    }
+</script>
+</body>
+</html>

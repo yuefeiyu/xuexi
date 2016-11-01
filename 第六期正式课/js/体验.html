@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="box1"></div>
+<div class="box2">
+    <P></P>
+    <P class="p2"></P>
+    <P></P>
+
+</div>
+
+<div class="box3">
+    <p class="p3"></p>
+</div>
+<script src="jquery-1.11.3.js"></script>
+<script>
+//   console.log($('div:eq(1) p:eq(1)') )
+//   console.log($('.p3') )
+var data=null
+$.ajax({
+    url:'json/data.txt',
+    type:'get',
+    async:false,
+    dataType:'json',
+    success:function(val){
+        data=val;
+    }
+})
+console.log(data)
+</script>
+</body>
+</html>

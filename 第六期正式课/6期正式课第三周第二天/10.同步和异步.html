@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    /*setTimeout(function(){
+        alert(123)
+    },0)
+    /!*alert(456)*!/
+    while(2){
+
+    }*/
+    var n=0;
+    setTimeout(function(){
+        n+=2;
+        alert(n);
+    },20)//7 当我们把定时器时间设置为2的时候，出现的结果就不一致了，因为定时器时间越小越不精准
+    setTimeout(function(){
+        n+=5;
+        alert(n);
+    },0)//5
+    alert(n);//0
+    for(var i=0; i<1000000; i++){}
+    alert(n);//0
+</script>
+</body>
+</html>

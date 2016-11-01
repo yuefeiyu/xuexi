@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //功能：判断某个属性是否是这个对象上的公有属性；
+    function hasPubProperty(attr,obj){
+        //这个属性是对象上的属性，并且不是私有属性；
+        return attr in obj && !obj.hasOwnProperty(attr)
+    }
+</script>
+</body>
+</html>

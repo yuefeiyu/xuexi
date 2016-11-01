@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form action="" method="">
+    <!-- placeholder   文本框默认提示的文字
+        标签属性之间用空格隔开
+    -->
+    <input type="text" placeholder="请输入账号"/>
+
+    <label for="name">姓名</label>
+    <input type="text" id="name"/>
+    <!-- label中for的值和input中id值相同的时候，点击label中的文字 相应的文本框中会出现光标-->
+    <label for="pass">密码</label>
+    <input type="password" id="pass"/>
+
+    <!-- 单选框-->
+    <input type="radio" id="mrs" name="sex" /><label for="mrs">男</label>
+    <!-- checked="checked"   默认选中-->
+    <input type="radio" id="miss" name="sex" checked="checked"/><label for="miss">女</label>
+
+    <!-- 多选框-->
+    <input type="checkbox" id="html" checked="checked"/><label for="html">html</label>
+    <input type="checkbox" id="css"/><label for="css">css</label>
+    <input type="checkbox" id="js"/><label for="js">js</label>
+    <input type="checkbox" id="nodejs"/><label for="nodejs">nodejs</label>
+
+    <!-- 普通按钮  value按钮中的内容-->
+    <input type="button" value="普通按钮"/>
+    <!-- 提交按钮-->
+    <input type="submit"/>
+
+    <!-- 重置按钮-->
+    <input type="reset"/>
+
+    <!-- 传文件（.css  .html .txt .js  音频  视频
+
+    .jpg(普通图片)
+    .png（透底图片）
+    .gif(动态图片)
+
+    -->
+    <input type="file"/>
+
+    <!--文本域  maxlength="5"  输入字符的最大长度-->
+    <textarea name="" id="" cols="30" rows="10" maxlength="5"></textarea>
+
+    <!-- 下拉列表-->
+    <select name="" id="">
+        <option value="北京">北京</option>
+        <option value="上海">上海</option>
+        <option value="南京">南京</option>
+        <option value="杭州">杭州</option>
+    </select>
+
+    <input type="text" maxlength="5" />
+    <input type="password" maxlength="6"/>
+
+
+
+
+
+
+
+
+</form>
+
+</body>
+</html>

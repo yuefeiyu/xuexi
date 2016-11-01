@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*p{
+           color: red;
+        }*/
+        /*span{
+            color: blue;
+        }*/
+        a{
+            /*color: aqua;*/
+        }
+    </style>
+</head>
+<body style="height: 3000px">
+基本选择器
+1、标签选择器
+标签名{}
+<p>
+    <span>习近平</span>致电祝贺金正恩任朝鲜劳动党委员长
+    网信事业三大使命  企业责任  治国理政  核心技术  国平
+    李克强谈提高行政效能  简约治理
+    <a href="http://www.zhufengpeixun.cn">珠峰培训</a>
+</p>
+2、类选择器
+.className{}
+<ul>
+    <li class="list1">选项1</li>
+    <li class="list2">选项2</li>
+    <li>选项3</li>
+    <li class="list4">选项4</li>
+</ul>
+<style>
+    .list1{background: red}
+    .list2{ color: red}
+    .list4{ font-size: 26px}
+</style>
+3、id选择器
+#idName{}
+唯一性 相同的id值只能用一次
+<!--
+    id选择器  身份证号
+    标签选择器  姓
+    类选择器  名字
+
+-->
+<ul>
+    <li>选项1</li>
+    <li id="li2">选项2</li>
+    <li id="li3">选项3</li>
+    <li>选项4</li>
+</ul>
+<style>
+    #li2{color: red}
+    #li3{background: red}
+    *{
+        /*display: none;*/
+        /*隐藏*/
+    }
+</style>
+4、通配符选择器:选择所有的标签
+*{}
+
+其他选择器
+5、子代选择器
+父级元素>子级元素
+<div>
+    <p>习近平致电祝贺金正恩任朝鲜劳动党委员长
+        网信事业三大使命  企业责任  治国理政  核心技术  国平
+        李克强谈提高行政效能
+        <span>简约治理</span>
+    </p>
+</div>
+<style>
+    div>p>span{
+        /*color: red;*/
+    }
+    div span{
+
+    }
+    div>p>span{
+        color: orange;
+    }
+
+</style>
+
+6、
+类型选择器
+<input type="text"/>
+<input type="button" value="登录"/>
+<style>
+    input[type=text]{
+        /*background: red;*/
+    }
+    input[type=button]{
+        width: 100px;
+    }
+</style>
+7、交集选择器：样式增加权重
+<ul>
+    <li>选项1</li>
+    <li class="li2">选项2</li>
+    <li class="li3 li33">选项3</li>
+    <li>选项4</li>
+</ul>
+<style>
+    li{
+        color: blue;
+    }
+    li.li2{
+        color: red;
+    }
+    .li3.li33{
+        /*10+10=20*/
+        color: black;
+    }
+    li.li3{
+        /*1+10=11*/
+        color: orange;
+    }
+    /*
+    标签选择器 1
+    类选择器   10
+    id选择器   100
+
+    */
+</style>
+8、并集选择器
+<div class="box1">box1</div>
+<div class="box2">box2</div>
+<style>
+    .box1,.box2{
+        width: 200px;
+        border: 5px dotted red;
+        margin: 10px ;
+    }
+
+</style>
+9、伪类选择器
+<a href="">超链接</a>
+<input type="text"/>
+<style>
+    a:hover{
+        /*鼠标经过时的样式*/
+        color: green;
+    }
+    input[type=text]:focus{
+        /*获取光标时的样式*/
+        background: red;
+    }
+</style>
+
+
+
+
+</body>
+</html>

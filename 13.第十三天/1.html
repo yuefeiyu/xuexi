@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        dl{
+            position: relative;
+            list-style: none;
+            width: 140px;
+        }
+        dt{
+            height: 140px;
+            position: relative;
+        }
+        dt img{
+            width:140px;
+            height: 140px;
+        }
+        dd{
+            font-size: 12px;
+            background: #cccccc;
+            height: 24px;
+            line-height: 24px;
+        }
+        dt .hide{
+            display: none;
+            width: 140px;
+            height: 140px;
+            background: rgba(0,0,0,.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        dt:hover .hide{
+            display: block;
+        }
+        dd .hide1{
+            display: none;
+            width: 140px;
+            height: 164px;
+            background: rgba(0,0,0,.6);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        dd:hover .hide1{
+            display: block;
+        }
+        dd:hover{
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+<dl>
+    <dt>
+        <img src="img/pic1.jpg" alt=""/>
+        <div class="hide"></div>
+    </dt>
+    <dd>基于最近流行音乐为你
+        <div class="hide1"></div>
+    </dd>
+</dl>
+
+</body>
+</html>

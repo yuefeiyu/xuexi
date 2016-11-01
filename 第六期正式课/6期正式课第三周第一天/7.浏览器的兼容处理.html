@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #div{
+            width: 200px;
+            height: 200px;
+            padding:10px;
+            position: relative;
+            left:0;
+            top:0;
+            border:10px solid green;
+        }
+    </style>
+</head>
+<body>
+<div id="div">珠峰培训</div>
+<script>
+    var oDiv=document.getElementById('div');
+    //getComputedStyle(oDiv,null) 获取浏览器样式集合 问题：不兼容IE6-8;
+    //console.log(getComputedStyle(oDiv,null)['width'])
+    //console.log(oDiv.currentStyle.width)//IE获取非行间样式 obj.currentStyle
+    //获取非行间样式；
+    //思想1：try。。。catch
+    /*原理：try执行浏览器兼容的JS代码，如果报错的话，会进catch，我们就可以在catch中做其他浏览器的兼容处理*/
+    /*function getCss(curEle,attr){
+        var val=null;
+        try{//高级浏览器的兼容处理
+            val=getComputedStyle(curEle,false)[attr];
+        }catch(e){//低级浏览器兼容处理
+            val=curEle.currentStyle[attr];
+        }
+        return val;
+    }*/
+    //思想2：关于属性判断
+    //属性判断中的 in 思想；
+    /*function getCss(curEle,attr){
+        var val=null;
+        if('getComputedStyle' in window){
+            val=getComputedStyle(curEle,false)[attr];
+        }else{
+            val=curEle.currentStyle[attr];
+        }
+        return val;
+    }*/
+    //对象.属性名
+    /*function getCss(curEle,attr){
+        var val=null;
+        if(window.getComputedStyle){
+            val=getComputedStyle(curEle,false)[attr];
+        }else{
+            val=curEle.currentStyle[attr];
+        }
+        return val;
+    }*/
+    //typeof 对象.属性名
+    /*function getCss(curEle,attr){
+        var val=null;
+        if(typeof window.getComputedStyle ==='function'){
+            val=getComputedStyle(curEle,false)[attr];
+        }else{
+            val=curEle.currentStyle[attr];
+        }
+        return val;
+    }*/
+   // alert(navigator.userAgent.search(/MSIE (6|7|8)/))
+    //alert(typeof navigator.userAgent)
+    //思路3：判断浏览器处理兼容
+    /*function getCss(curEle,attr){
+        var val=null;
+        if(/MSIE [6-8]/.test(navigator.userAgent)){
+            val=curEle.currentStyle[attr];
+        }else{
+            val=getComputedStyle(curEle,false)[attr];
+        }
+        return val;
+    }*/
+    function getCss(curEle,attr){
+        var val=null;
+        if(navigator.userAgent.search(/MSIE [6-8]/)!=-1){
+            val=curEle.currentStyle[attr];
+        }else{
+            val=getComputedStyle(curEle,false)[attr];
+        }
+        return val;
+    }
+    console.log(getCss(oDiv,'paddingLeft'))
+
+</script>
+</body>
+</html>
+
+
+
+
+
+

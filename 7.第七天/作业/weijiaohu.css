@@ -1,0 +1,23 @@
+*{padding: 0;
+margin: 0;
+font-family: "Î¢ÈíÑÅºÚ","Oswald", "Helvetica Neue", "Microsoft YaHei", Helvetica, Arial, Verdana, sans-serif}
+ul{list-style: none;display: block;
+background:#343f50;
+width: 689px;height: 37px;
+}
+a{text-decoration: none}
+.clearfix:after,.clearfix:before{content: ""
+;display: block;clear: both}
+li{float: left;margin-left:47px;height: 37px;line-height: 40px;
+text-align: center}
+.clearfix li a{ display: inline-block;font-size:16px; color:#9bb9c8}
+.clearfix li a span{display: inline-block;border: 5px solid transparent;border-top: 5px solid #9bb9c8;  }
+.clearfix li a:hover{background:#c4c2c8;color: #343f50;padding: 0px 15px }
+.clearfix li a:hover .l1{border-top:5px solid #343f50;}
+div{width:159px;height: 140px;
+position: absolute;top: 37px;left:30px ;
+background: #343f50}
+.clearfix .l2{position: relative;overflow: hidden;}
+.l2 .l3 p{height:25px ;color:#c4c2c8;
+font-size: 12px;padding-right: 40px}
+.clearfix .l2:hover{width:159px;height: 140px;padding-right: 50px}

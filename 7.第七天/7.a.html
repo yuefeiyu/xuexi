@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        a:visited{
+            /*访问之后的样式*/
+            color: green;
+        }
+        a:hover{
+            color: black;
+        }
+        a:active{
+            /*激活时的样式*/
+            color: yellow;
+            font-size: 40px;
+        }
+        a:link{
+            /*默认的样式*/
+            color: red;
+            font-size: 50px;
+        }
+
+        input[type=text]:focus{
+            outline: none;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            /*background: red;*/
+            border: 10px solid red;
+            /*border-radius: 10px;*/
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<a href="http://www.baidu.com" target="_blank">百度</a>
+<a href="http://www.mi.com" target="_blank">小米</a>
+<input type="text" placeholder="小米Max"/>
+<div></div>
+
+</body>
+</html>

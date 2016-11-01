@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body,html{
+            height: 2000px;
+        }
+        *{
+            margin:0;
+            padding:0;
+        }
+        p{
+            position: absolute;
+            top:1000px;
+            width:400px;
+            height: 260px;
+            background: url("img2/default.gif") center center no-repeat #e1e1e1;
+        }
+        p img{
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            filter: alpha(opacity=10);
+        }
+    </style>
+</head>
+<body>
+<p><img realImg="img2/1.jpg" alt=""/></p>
+<script src="utils.js"></script>
+<script>
+    //当满足条件的时候，让图片开始加载
+    /*
+    * 1.满足条件：要满足条件必须触发滚轮事件
+    * 当前元素距离body的top值+当前元素的高度<=浏览器卷去的高度+可视区的高度
+    * 2.图片加载
+    * 1）创建一个临时的img对象，用他来测试图片地址是否正确
+    * 2）如果地址正确话，把地址赋值给img.src
+    * 3)如果不正确 先不做任何操作
+    * 无论是否正确：
+    *   都需要释放临时的img对象；
+    *   避免重复加载；
+    *
+    *
+    * */
+    var oImg=document.getElementsByTagName('img')[0];
+    window.onscroll=function(){
+        var scrollBottom=utils.win('scrollTop')+utils.win('clientHeight');
+        var imgPositon=utils.offset(oImg).top+utils.getCss(oImg,'height');
+        if(imgPositon<=scrollBottom){
+            lazyImg();
+        }
+    }
+    function lazyImg(){
+        if(oImg.loaded){
+            return;
+        }
+        var tmpImg=new Image;
+        tmpImg.src=oImg.getAttribute('realImg');
+        tmpImg.onload=function(){
+            oImg.src=this.src;
+            tmpImg=null;
+            oImg.loaded=true;
+        };
+        tmpImg.onerror=function(){
+            tmpImg=null;
+            oImg.loaded=true;
+        }
+    }
+    console.log(utils.getCss(oImg,'opacity'))
+</script>
+</body>
+</html>

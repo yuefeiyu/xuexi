@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body style="height: 3000px">
+
+<!--
+z-index可以设置层级关系的css属性
+z-index只能在兄弟级元素之间比较，不能和父级元素比较，父级元素永远在子系元素的最下边
+z-index没有单位（不可以设置0和负值）
+
+-->
+<style>
+    *{margin: 0;padding: 0}
+    .parent{
+        position: fixed;
+        width: 400px;
+        height:400px ;
+        background: red;
+    }
+    .parent div{
+        position: absolute;
+    }
+    .child1{
+        z-index: 0;
+        width: 300px;
+        height: 100px;
+        background: green;
+    }
+    .child2{
+        /*z-index: 2;*/
+        width: 200px;
+        height: 350px;
+        background: blue;
+    }
+    .child3,.child4{
+        /*z-index: 3;*/
+        width: 100px;
+        height: 370px;
+        background: yellow;
+    }
+    .child4{float: left;
+        background: black;
+        height: 400px;
+    }
+
+</style>
+
+
+<div class="parent">
+    <div class="child4">child4</div>
+    <div class="child1">child1</div>
+    <div class="child2">child2</div>
+    <div class="child3">child3</div>
+</div>
+
+
+
+
+
+</body>
+</html>

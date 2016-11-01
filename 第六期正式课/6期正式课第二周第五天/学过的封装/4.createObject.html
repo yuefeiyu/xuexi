@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //把obj2作为obj的原型
+    //返回的对象是个实例
+    function createObject(o){
+        function Fn(){};
+        Fn.prototype=o;
+        return new Fn;
+    }
+    var obj=createObject(obj2)
+</script>
+</body>
+</html>

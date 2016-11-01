@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var str='alpha(opacity=10)';
+    //在正则没有全局g的情况下
+    /*var reg=/^alpha\(opacity[=:](\d+)\)$/;
+    /!*console.log(reg.lastIndex)
+    console.log(reg.test(str));
+    console.log(reg.lastIndex)
+    console.log(reg.exec(str))*!/
+    if(reg.test(str)){
+        console.log(reg.exec(str)[1]/100)
+    }*/
+    var reg=/^alpha\(opacity[=:](\d+)\)$/g;
+    if(reg.test(str)){
+        console.log(RegExp.$1/100)
+    }
+
+
+
+
+
+
+</script>
+</body>
+</html>

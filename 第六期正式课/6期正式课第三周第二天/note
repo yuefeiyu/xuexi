@@ -1,0 +1,86 @@
+1.正则知识的补充
+1）reg.test 和 reg.exec在捕获的时候，都会影响reg.lastIndex;
+2)
+RegExp.$1 代表正则的第一个小分组
+RegExp.$2 代表正则的第2个小分组
+。。。。。。代表不同的小分组；
+关于RegExp需要注意的几点
+1）RegExp.$1  不影响lastIndex
+所以我们加了全局g的时候，可以用lastIndex去取值
+2)RegExp.$ 最大只能到$9; 如果大于$9，就取不到值，我们拿到的就是undefined；
+3)在replace下，最好不要用RegExp.$，因为他不兼容；最好用replace第二个参数（callback）自带的参数机制；
+2.伪类：给一个标签的前面或者后面添加一个虚拟标签，我们可以对虚拟标签进行各种样式和内容的设置；
+伪类清除浮动：
+ul:after{
+            display: block;
+            content: '';
+            clear: both;
+        }
+
+3.定位父级和结构父级
+parentNode 按标签算的话，最大值为html标签； 不按标签算--最大值htmlDocument;
+offsetParent 如果没有定位的话，定位父级默认就指向body；
+4.跑马灯的思路：
+    实现核心原理：不断改变ul的left;
+    1.为了防止空白，给ul内容多克隆了一份
+    2.为了让所有的li在一行显示，重新设置ul的宽度 一个li的宽度*li的个数
+    3.不断减少ul的left，当ul的left<=-800时；让left=0;
+    4.鼠标移入停止运动，移出继续运动
+5.同步和异步
+同步：当前的任务没有完成，不会开始下个任务
+    在JS中用的最多的是同步；最典型就是（for，while） 循环
+异步：当前任务没有完成，不会等，继续开始执行下个任务，等下面所有的任务都完成时候，在回过头来执行当前这个任务的结果；如果下面任务永远都完成不了呢？不会回头执行前面的结果；
+
+JS中常见的异步处理：
+1）元素身上的事件
+2)定时器
+3）回调函数
+4）ajax
+6.定时器小技巧
+1）开启定时器前，可以先关闭定时器
+2）定时器的时间设置越小越不精准，而且，即使设置为0；他也不是0ms，因为各大浏览器对定时器，都有一个最小值的设置；
+7.单张图片的延迟加载
+需求：当整张图片都进入我们眼睛可视区的时候，才让他加载，否则，不加载；
+1）一开始时，就不能把正确的地址放在src上，把真正的地址存在realImg这个自定义属性上
+2)当图片满足条件的时候，才把真正的地址从realImg上取下来，验证图片地址无误的时候，才放在src上
+    1）把真正的地址从realImg上取下来
+    2）创建一个对象，来校验图片地址是否正确
+    3）对图片地址的校验结果做不同的处理；
+    图片地址正确：赋值给src
+        1)把正确的图片地址赋值给src
+        2）释放掉不用的对象 tmpImg;
+        3)避免重复加载；
+    图片地址错误：自动报错，我们需要做的无论成功与否，都避免重复加载；
+公式：图片距离body定位的位置+图片的高度<浏览器卷去的高度+可视区的高度；
+8.JS盒子模型
+用JS的属性和方法，去获取浏览器计算过的元素的各种样式值；
+JS的属性和方法：
+client系列
+    clientWidth: 设定的宽+左右padding  ->同类 clientHeight
+    clientLeft:当前元素的边框的宽度
+    跟内容是否溢出没有关系
+offset系列
+    offsetWidth: clientWidth+左右border的宽度 ->同类 offsetHeight
+    offsetLeft:当前元素的外边框距离有定位父级的内变框的距离；-》同类 offsetTop;
+    offsetParent -》定位父级 最大-body
+    parentNode -> 结构父级 最大标签 html;
+    跟内容是否溢出没有关系
+scroll系列
+    scrollHeight:
+        在没有内容溢出的情况下 相当于clientHeight -》scrollWidth===clientWidth
+        如果有内容溢出的情况下 约等于 ：上padding+真实内容的高度 ->左padding+真实内容的宽度；
+        约等于：
+        1.在不同浏览器下，同一个元素取到的值不同；
+        2.在内容是否溢出隐藏（overflow:hidden）的情况下，即使同一浏览器，同一元素，获取到的值也不同；
+    scrollTop:浏览器卷去的高度； 同理：scrollLeft;
+9.utils目前封装过的方法
+    1）listToArray
+    2)jsonParse
+    3)win
+    4)getCss
+    5)offset
+10回去预习:1）回到顶部
+          2）getByClassName addClass removeClass
+
+
+

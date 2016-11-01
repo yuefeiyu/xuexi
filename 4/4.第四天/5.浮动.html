@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding:0;
+            margin: 0;
+        }
+        ul{
+            list-style: none;
+            /*height: 400px;*/
+            /*float: left;*/
+        }
+        li{
+            width: 200px;
+            height: 200px;
+            background:red ;
+            text-align: center;
+            margin: 0 0 10px 10px;
+            float: left;
+            font-size: 30px;
+            color: white;
+        }
+        .clearfix:after{
+            /*:after 在元素里最末尾加上内容*/
+            content:'';
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<ul style="background: yellow" class="clearfix">
+    <li>我是第1个盒子</li>
+    <li>我是第2个盒子</li>
+    <li>我是第3个盒子</li>
+    <li>我是第4个盒子</li>
+    <!-- 清除浮动：清除浮动的元素对其他元素造成的影响-->
+    <!--<p style="clear: both"></p>-->
+</ul>
+<ul style="background: yellow" class="clearfix">
+    <li>我是第1个盒子</li>
+    <li>我是第2个盒子</li>
+    <li>我是第3个盒子</li>
+    <li>我是第4个盒子</li>
+    <!-- 清除浮动：清除浮动的元素对其他元素造成的影响-->
+    <!--<p style="clear: both"></p>-->
+</ul>
+<div style="width: 800px;height: 300px;background: blue"></div>
+</body>
+</html>

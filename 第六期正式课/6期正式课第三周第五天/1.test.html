@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #box div{
+            height: 40px;
+        }
+        .bg0{
+            background: red;
+        }
+        .bg1{
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <div class="box1 box2 box3 box4">1</div>
+    <div class="box1 box2 box3">2</div>
+    <div class="box1 box2">3</div>
+    <div class="box1">4</div>
+</div>
+<script src="utils.js"></script>
+<script>
+    var oBox=document.getElementById('box');
+    var aDiv=oBox.getElementsByTagName('div');
+   // console.log(utils.getChildren(oBox))
+   // console.log(aDiv[2].previousElementSibling)
+    //console.log(utils.prev(aDiv[2]).className)
+   /*var nodeList=utils.nextAll(aDiv[0]);
+    for(var i=0; i<nodeList.length; i++){
+        nodeList[i].className='bg'+i%2;
+    }*/
+    console.log(utils.lastChild(oBox))
+
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        li.bg0{height: 50px;background: red}
+        li.bg1{height: 50px;background: green}
+        li.bg2{height: 50px;background: blue}
+    </style>
+</head>
+<body>
+<ul >
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<script>
+    var  aln=document.getElementsByTagName('li');
+         for(var i=0;i<aln.length;i++)
+         {aln[i].className='bg'+i%3
+             aln[i].onmouseover=function(){this.style.background='yellow'};
+             if(i%3==0){
+             aln[i].onmouseout=function(){this.style.background='red'}}
+         else if(i%3==1){
+             aln[i].onmouseout=function(){this.style.background='green'}}
+         else {
+             aln[i].onmouseout=function(){this.style.background='blue'}}
+    }
+</script>
+</body>
+</html>

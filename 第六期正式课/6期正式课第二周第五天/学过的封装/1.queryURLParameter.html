@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var str='http:baidu.com?name=zhufeng&age=8';
+    //功能：把字符串中的关键字，提取为对象的形式
+    String.prototype.queryURLParameter=function(){
+        var obj={};
+        var reg=/([^?=&]+)=([^?=&]+)/g;
+        this.replace(reg,function($0,$1,$2){
+            obj[$1]=$2;
+        })
+        return obj;
+    }
+    var obj=str.queryURLParameter()
+    console.log(obj)
+</script>
+</body>
+</html>

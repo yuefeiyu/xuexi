@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var ary = [5, 6, 7, 9, 8, 18]
+    function kuaipai(ary) {
+        if (ary.length <= 1) {
+            return ary;
+        }
+        var num = Math.floor(ary.length / 2)
+        var numVa = ary.splice(num, 1)[0]
+        var left = []
+        var right = []
+        for (var i = 0; i < ary.length; i++) {
+            if (ary[i] < numVa) {
+                left.push(ary[i])
+            } else {
+                right.push(ary[i])
+            }
+        }
+        return kuaipai(left).concat([numVa], kuaipai(right))
+    }
+    console.log(kuaipai(ary))
+</script>
+</body>
+</html>

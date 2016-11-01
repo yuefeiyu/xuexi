@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>js中的判断语句</title>
+</head>
+<body>
+<script type="text/javascript">
+    //if else 可以用在js所有的判断中 也是最常用的
+    /*if(条件){
+        //条件成立时 执行的语句
+    }else{
+        //上面条件不成立的时候 执行的语句 -- 是可以省略的
+    }*/
+
+    /*if(条件1){
+        //条件1成立时执行
+    }else if(条件2){
+        //条件2成立执行
+    }else if(条件3){
+        //条件3成立执行
+    }...else{
+        //以上都不成立执行--是可以省略的
+    }*/
+    //var num=13; //声明一个变量
+    //console.log(typeof num);//检测num里面的值的数据类型 --- number
+    //typeof 检测数据类型
+    /*if(num<0){
+        alert("我小于0")
+    }else if(num>0){
+        alert("我大于0")
+    }*/
+    /*if(num<0){
+        alert("我小于0")
+    }else{
+        alert("我大于0")
+    }*/
+    //三元运算符 用在简单的if判断中
+
+    //num<0?alert("我小于0"):alert("我大于0");
+    //条件 ? 成立执行的语句:条件不成立时执行的语句;
+    /*var num=13;
+    if(num>0){
+        alert("我大于0");
+    }
+
+    num>0?alert("我大于0"):void 0;*/
+    //void 0 进行条件不成立时的占位
+    //<a href="javascript:;"></a>
+    //content="" 伪类中
+
+    //js中的等号
+    // =  代表赋值
+    //== 比较 等号两边的值
+    //=== 绝对比较 就是等号两边必须是相同的时候 才会成立
+   // var num="10";
+    //alert(num); //"10"
+    //string == number  先将string 转化为数字 再进行比较
+    //用到了一个方法 Number(num);
+    //console.log(Number(num));
+    /*if(num===5){
+        alert(5)
+    }else if(num===10){
+        alert(10)
+    }else{
+        alert("开玩笑")
+    }*/
+    //两个等号会进行等号两边数据类型的转换
+    //三个等号直接比较 如果等号两侧的数据类型不同 直接放弃 不进行比较
+    //switch 判断是绝对判断 相当于===
+    //var num=5;
+    /*switch (条件){
+        case 条件值:
+            执行的语句;
+            break;
+         ....
+        default ://else
+            以上都不成立执行的语句
+    }*/
+    // break 当这个条件成立的时候 就不在运行下面的代码
+    //不同值时的不同操作
+    /*switch (num){
+        case 3:
+            console.log(3);
+            break;
+        case 5:
+            console.log(5);
+            break;
+        case 10:
+            console.log(10);
+            break;
+        case 12:
+            console.log(12);
+            break;
+        default ://相当于else
+            console.log("玩笑");
+    }*/
+    var oBody=document.getElementById("");
+
+</script>
+</body>
+</html>

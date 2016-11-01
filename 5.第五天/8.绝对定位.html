@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{margin: 0;padding: 0}
+        .div1{
+            width: 200px;
+            height: 200px;
+            background: yellow;
+            position: absolute;
+            /*绝对定位*/
+            top:0;
+            left: 0;
+        }
+        .div2{
+            width: 300px;
+            height: 300px;
+            background: black;
+        }
+    </style>
+</head>
+<body>
+<!--<div class="div1"></div>
+<div class="div2"></div>-->
+<!--
+1）绝对定位的元素  脱离了正常的文档流
+
+
+-->
+<style>
+    .parent{
+        position: relative;
+        width: 300px;
+        height: 300px;
+        background: red;
+        margin: 100px;
+    }
+    .child{
+        position: absolute;
+        top:50px;
+        left: 50px;
+        width: 200px;
+        height: 200px;
+        background: yellow;
+        /*
+        绝对定位的元素  不去设置top(bottom) left(right)的值，参照物是父级元素
+
+        如果设置top 和left 绝对定位的参照物是body
+        如果给定绝对定位的元素 去设置一个参照物，只需要给他加上position：relative
+        绝对定位的元素 父级元素设置position：relative或者postion：abosulte  都是这个子级元素的参照物
+        绝对定位的行内元素 可以设置宽度和高度，margin，padding
+
+        绝对定位元素的层级和html书写顺序有关  谁写在后边谁的层级高
+
+(脱离文档流的行内元素可以设置宽度和高度)
+
+        */
+    }
+    .child_son{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 100px;
+        height: 100px;
+        background: black;
+    }
+</style>
+<div class="parent">
+    <div class="child">
+        <span class="child_son">span</span>
+    </div>
+</div>
+
+</body>
+</html>

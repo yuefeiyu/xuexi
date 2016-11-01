@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var str = 'sssBbsbbssSaAccACcCCcAA';
+    str = str.split('').sort(function (a, b) {
+        return a.localeCompare(b);
+    }).join('');
+    var reg = /(\w)\1+/gi;
+    var num = 0;
+    var ary = [];
+    var obj = {};
+    //求出现最多的次数？
+    str.replace(reg, function ($0, $1) {
+        var len = $0.length;
+        if (typeof obj[len] === "undefined") {
+            obj[len] = $1;
+        } else {
+            obj[len] += "," + $1;
+        }
+        if (len >= num) {
+            num = len;
+        }
+    });
+    console.log(obj[num]);
+//    //次数最多的是谁？
+//    str.replace(reg, function ($0, $1) {
+//        if ($0.length === num) {
+//            ary.push($1);
+//        }
+//    })
+
+</script>
+</body>
+</html>

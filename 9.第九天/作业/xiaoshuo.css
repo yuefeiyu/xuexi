@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+table{margin: 0 auto
+ ;width: 598px;border: 1px solid #cccccc }
+th {
+    font-size: 14px;
+    color: #000000;
+}
+.le{padding-left:18px}
+.lq{padding-left:121px; padding-right: 145px}
+.lw{
+    padding-right: 40px;}
+tbody .bj{
+    width: 596px;height: 26px;background: #f5f5f5;padding-left:1px }
+.l1{padding-left: 18px}
+.l1 a{font-size: 12px;color: #666666;
+}
+.l2 a  span{font-size: 14px;color:#004d00}
+.l2 a{font-size: 12px;color: #666666;}
+.l3 a{font-size: 14px;color: #000000}
+.l4{font-size: 10px;color:#666666;}
+.l1:hover,.l2 p:hover,.l3:hover{position:relative;top:1px}
+p{display: inline-block}
+.l2  span:hover{ color: red;position:relative;top:1px }

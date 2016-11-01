@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<table border="1" style="border:1px" width="500" cellpadding="10" cellspacing="10">
+    <!-- 标签属性  不用加单位px
+        css属性   必须加单位px
+    -->
+    <!-- 文字水平居中-->
+    <caption>标题</caption>
+    <!-- 表头-->
+    <thead>
+    <!-- 行-->
+        <tr>
+            <!-- th 文字水平居中 默认加粗-->
+            <th colspan="2">单元格</th>
+            <!--<th>单元格</th>-->
+            <th>单元格</th>
+        </tr>
+    </thead>
+    <!-- 表尾  tfoot可以不加  只出现一次-->
+    <tfoot>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+    </tfoot>
+    <!-- 表格的主体内容-->
+    <tbody>
+    <!-- 行-->
+    <tr>
+        <!-- 列-->
+        <!--
+        rowspan合并行
+        colspan合并列
+        -->
+        <td rowspan="2" colspan="2">单元格</td>
+        <!--<td>单元格</td>-->
+        <td>单元格</td>
+    </tr>
+    <tr>
+        <!-- 列-->
+        <!--<td>单元格</td>-->
+        <!--<td>单元格</td>-->
+        <td>单元格</td>
+    </tr>
+
+    </tbody>
+
+
+
+</table>
+
+</body>
+</html>

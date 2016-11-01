@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+div.l1, ul {
+    list-style: none
+}
+
+a {
+    text-decoration: none
+}
+
+.
+img {
+    border: none;
+    display: block
+}
+
+.clearfix:after,
+.clearfix:before {
+    content: "";
+    display: block;
+    clear: both
+}
+
+li {
+    float: left;
+}
+
+img {
+    width: 225px;
+    height: 127px
+}
+
+.a, .s, .d, .f, .g, .h, .j {
+    margin-right: 29px;
+    margin-bottom: 9px;
+    margin-top: 28px;
+}
+
+.q, .w, .e, .r, .t, .y {
+    font-size: 12px;
+    margin-top: 12PX;
+}
+
+.t, .y {
+    margin-bottom: 14PX
+}
+
+.e, .t {
+    margin-right: 42px
+}
+
+.q {
+    margin-right: 56px
+}
+
+.z, .x, .c, .v, .b, .n {
+    margin-right: 17px;
+    width: 225px;
+    height: 171.5px
+}
+
+.c, .n {
+    margin-right: 0px;
+}
+
+.lq {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 64px;
+    height: 18px;
+    line-height: 18px;
+    background: #ffb536;
+    font-size: 10px;
+    text-align: center;
+    font-family: 'microsoft yahei';
+    color: #fffcff
+}
+
+.lw {
+    position: absolute;
+    top: 87px;
+    right: 0px;
+    width: 225px;
+    height: 40px;
+    font-size: 12px;
+    text-align: center;
+    font-family: 'microsoft yahei';
+    color: #fffcff;
+    background: rgba(88, 100, 107, 0.8)
+}
+
+.le {
+    font-size: 11px;
+    margin-top: 14px;
+    margin-left: 5px
+}
+
+.lr {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.lt {
+    font-size: 11px;
+    margin-top: 15px;
+}
+
+.le, .lr, .lt {
+    float: left;
+    color: #ff6600;
+    font-family: arial;
+}
+
+.ly {
+    text-decoration: line-through;
+    float: left;
+}
+
+.lu {
+    float: right;
+    padding-right: 6px
+}
+
+.ly, .lu {
+    font-size: 9px;
+    margin-top: 16px;
+    font-family: arial;
+    color: #a599b2
+}
+
+.l1 {
+    width: 970px;
+    height: 442px;
+    margin: auto;
+    margin-top: 200px;
+    border-right: 4px solid #f6f6f6
+}
+
+.l2 {
+    float: left;
+    width: 950px;
+    height: 59px;
+    margin-left: 5px;
+    border-bottom: 3px solid #eceef4
+}
+
+.l3 {
+    float: left;
+    background: white;;
+    width: 215px;
+    height: 343px;
+    margin-left: 5px;
+    margin-top: 20px;
+}
+
+.l4 {
+    float: left;;
+    width: 709px;
+    height: 343px;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+.l5 {
+    float: left;
+    width: 215px;
+    height: 183px;
+    border-top: 1px dotted #d7d7d7;
+}

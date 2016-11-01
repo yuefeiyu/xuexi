@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div span {
+            font-size: 100px
+        }
+
+        div .span2 {
+            color: red
+        }
+    </style>
+</head>
+<body>
+<div><span class="span1">距离端午:</span><span class="span2" id="span2">1天00时00分00秒</span></div>
+<script>
+    var oSpan2 = document.getElementById('span2')
+//    function qianZ(n) {
+//        if (n >= 0 && n < 10) {
+//            return '0' + n
+//        } else {
+//            return '' + n
+//        }
+//    }
+    function qianZ(n) {
+        return n >= 0 && n < 10?'0' + n:'' + n;}
+    function countDow(){
+        var oDate=new Date();
+        var newDate=new Date('2016/6/10 2:31:00')
+        var  s=Math.floor((newDate.getTime()-oDate.getTime())/1000);
+        var  d=Math.floor(s/(24*60*60));
+        s%=86400
+        var h=Math.floor(s/3600)
+        s%=3600
+        var m=Math.floor(s/60)
+        s%=60
+        var  str=qianZ(d)+'天'+qianZ(h)+'时'+qianZ(m)+'分'+qianZ(s);
+        oSpan2.innerHTML=str;
+    }
+    countDow()
+    clearInterval(timer)
+    var  timer=setInterval(countDow,1000)
+
+</script>
+</body>
+</html>

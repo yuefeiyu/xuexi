@@ -1,0 +1,118 @@
+*{margin:0;padding: 0}
+ul{
+    list-style: none
+}
+a{
+    text-decoration: none;
+}
+.clearfix:before,.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+body{
+    background: #f1f2f6;
+}
+.box{
+    width: 460px;
+    margin:0 auto;
+    background: #ffffff;
+    border: 1px solid #dfe0e4;
+}
+.header p{
+    width: 230px;
+    height: 62px;
+    line-height: 62px;
+    /*行高*/
+    float: left;
+    color: #616161;
+    font-size: 16px;
+    text-align: center;
+    /*文字水平居中*/
+}
+.header .reg{
+    background: #f5f5f5;
+}
+.content{
+    padding: 44px 60px 0;
+}
+.content .name label{
+    font-size: 14px;
+    color: #616161;
+    font-weight: bold;
+    /*文字加粗*/
+}
+.content .text input[type=text],.content .text input[type=password]{
+    width: 326px;
+    height: 38px;
+    border: 1px solid #e1e1e1;
+    margin: 6px 0 20px 0;
+    padding-left: 12px;
+    border-radius: 1px;
+
+}
+.rem label{
+    font-size: 12px;
+    color: #616161;
+}
+.text input[type=button]{
+    width: 338px;
+    height: 38px;
+    background:#7cb132 ;
+    border: 1px solid #608927;
+    border-radius: 1px;
+    margin: 20px 0;
+    font-size: 12px;
+    color: #ffffff;
+}
+.text input[type=button]:hover{
+    background: #669129;
+    cursor: pointer;
+}
+p{
+    font-size: 14px;
+    color: #919191;
+}
+p a{
+
+    color: #333333;
+}
+p a:hover{
+    color: #83bb36;
+}
+.foot{
+    width: 340px;
+    border-bottom: 1px solid #000000;
+    position: relative;
+    height: 50px;
+    margin-bottom: 52px;
+}
+.foot a{
+    position: absolute;
+    left: 136px;
+    top: 30px;
+    width: 71px;
+    background: #ffffff;
+
+}
+.foot a span{
+    background: url("../image/qie.png") no-repeat;
+    width: 35px;
+    height: 35px;
+    display: block;
+    margin: 0 auto;
+}
+.foot a span:hover{
+
+    background-position:-40px -1px ;
+    transition: background 0.2s;
+}
+
+
+
+
+
+
+
+
+

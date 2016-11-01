@@ -1,0 +1,48 @@
+1.css盒子模型： 设定好的宽高+padding+border+margin
+2.JS盒子模型：
+用JS提供的属性和方法去获取元素的各种样式值；
+3.JS提供的属性和方法
+    client系列： clientWidth clientHeight clientLeft clientTop;
+    offset系列：offsetWidth offsetHeight offsetLeft offsetTop offsetParent;
+    scroll系列： scrollWidth scrollHeight  scrollLeft scrollTop;
+4.JS提供的属性的详细解读
+1)client系列
+  构成：
+    clientWidth/height:设定的宽（高）+左右padding（上下padding）;
+    clientLeft/Top:border的宽度；
+  是否受内容溢出的影响：不受溢出影响；
+2）offset系列：
+  构成：
+    offsetWidth/height: 设定宽（高）+左右padding（上下padding）+border
+                 clientWidth+border
+  offsetLeft:当前元素的外边框距离定位父级的内边框的距离；
+  是否受内容溢出的影响：不受溢出内容的影响；
+3）scroll系列
+   构成:
+   scrollHeight:约等于上padding+真实内容的高度
+   为什么是约等于：
+   1）同一元素，不同浏览器测试的值不同；
+   2）同一元素，是否溢出隐藏，在同一浏览器下也不相同；
+
+5.发现4个小问题：
+1）对浏览器盒子模型的兼容处理（获取和设置）win;
+2）关于clientWidth（height），offsetWidth等只能拿到四舍五入的整数，不能取到小数
+3）以上涉及到的每种属性只能拿到复合值，无法拿到单独的高或者宽或者其他样式：
+(通过style只能拿到行间样式，不能拿到非行间样式) getCss;
+4)关于offset，当前元素的外边框距离有定位父级的内边框之间的距离;但我们没法知道，在页面多层嵌套及定位的情况下，该元素距离body的距离；offset
+6.浏览器兼容处理思想
+1）浏览器异常捕获兼容处理 try...catch
+缺陷：无论浏览器是否支持，都会走一遍try里的JS语句，性能相对来说差；
+2）属性判断
+    1.attr in obj
+    2.obj.attr
+    3. type of obj.attr==='function'
+3)浏览器版本判断 navigator.userAgent:可以打印出浏览器的详细信息，是个字符串；
+    1.reg.test(navigator.userAgent)
+    2.navigator.userAgent.search(reg)!=-1;找见了；
+    navigator.userAgent.search(reg)===-1;没找见；
+
+
+
+
+

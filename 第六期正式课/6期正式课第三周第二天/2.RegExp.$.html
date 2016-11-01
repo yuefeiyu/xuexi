@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var str='2011-32-33-34-35-36-37-38-39-40';
+    var reg=/(\d+)-(\d+)-(\d+)-(\d+)-(\d+)-(\d+)-(\d+)-(\d+)-(\d+)-(\d+)/g;
+    /*console.log(reg.lastIndex)
+    console.log(reg.exec(str));
+    console.log(reg.lastIndex)
+    console.log(RegExp.$1)
+    console.log(reg.lastIndex)
+    console.log(RegExp.$2)
+    console.log(reg.lastIndex)*/
+    /*reg.test(str);
+    console.log(RegExp.$1)
+    console.log(RegExp.$6)
+    console.log(RegExp.$9)
+    console.log(RegExp.$10)*/
+    str.replace(reg,function($0,$1){
+        //console.log(RegExp.$1)
+        console.log($1)
+    })
+</script>
+</body>
+</html>

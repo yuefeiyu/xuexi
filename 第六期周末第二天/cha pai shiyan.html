@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var ary = [28, 12, 8, 9, 34, 21];
+    function chaPai(ary) {
+        var left = ary.splice(0, 1);
+        for (var i = 0; i < ary.length; i++) {
+            for (var j = left.length - 1; j >= 0;) {
+                if (ary[i] < left[j]) {
+                    j--;
+                    if (j === -1) {
+                        left.unshift(ary[i])
+                    }
+                }else {
+                        left.splice(j + 1, 0, ary[i]);
+                        break;
+                    }
+                }
+            }
+            return left;
+        }
+        console.log(chaPai(ary))
+</script>
+</body>
+</html>

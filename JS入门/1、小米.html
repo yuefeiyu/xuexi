@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .one .list1 a{
+            /*21*/
+            color: red;
+        }
+        ul li a{
+            /*3*/
+           color: pink;
+        }
+        /*
+            .
+            E
+            id
+            *
+            子代  >
+            后代 空格
+            ,
+            E.className  //增加权重
+            .class1.class2(不兼容)
+            E#idName（错）
+            <p class="class1 class2"></p>
+            :
+            input[type=value]{}
+        */
+    </style>
+</head>
+<body>
+    <ul class="one">
+        <li class="list1">
+            <a href="">1</a>
+            <ul>
+                <li>
+                    <a href="">222</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <a href="">333333</a>
+        </li>
+    </ul>
+</body>
+</html>

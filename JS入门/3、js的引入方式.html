@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+
+    </style>
+
+</head>
+<body>
+<!--
+js的引入方式 三种
+写在标签内的js代码 叫做行内式
+-->
+<div style="width: 300px;height: 200px;background-color: red;" onclick="alert('你好')">
+    onclick 元素的点击事件
+    任何元素都有点击事件
+    alert 弹出 在浏览器窗口弹出
+    background-image: url("");
+    onclick="alert("你好")"
+    js中 不允许 双引号套用 或者单引号套用 " ' " '' " ' "
+</div>
+<script type="text/javascript">
+    //js的注释
+    //内嵌式 写在body结束标签之前 js是操作对象的 有了对象才能进行操作 所以先加载html结构 在进行元素的操作
+
+    alert("欢迎大家来到珠峰培训！ 这是一个激情满满的集体！");
+</script>
+<link rel="stylesheet" href="style.css" type="text/css"/>
+<script src="index.js" type="text/javascript">
+    //外链式
+    //alert("第三次弹出");
+    //写在外链式标签内的js代码是不生效的
+</script>
+
+前面是一个方法库
+后面是调用这些方法的代码
+js也是有先后顺序的
+
+
+
+
+</body>
+</html>

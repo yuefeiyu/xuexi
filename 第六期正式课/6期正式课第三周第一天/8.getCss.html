@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #div{
+            width: 200px;
+            height: 200px;
+            padding:10px;
+            position: relative;
+            left:0;
+            top:0;
+            border:10px solid green;
+            opacity: 0.1;
+            filter:alpha(opacity=10);/*用来处理IE的兼容*/
+        }
+    </style>
+</head>
+<body>
+<div id="div">珠峰培训</div>
+<script>
+    var oDiv=document.getElementById('div');
+    //升级1：要求获取到的数据没有单位，注意，获取到的样式值，有的有单位，有的没有，我们只对有单位的进行处理；‘+-100.234px pt rem em’;
+    //升级2：处理透明度兼容性；
+    /*
+    * （[+-]）？ +or-可有可无
+    *  \d+ 100这类的数字
+    *  (\.\d+)?
+    *  (px|pt|rem|em)
+    * */
+    function getCss(curEle,attr){
+        var val=null;
+        var reg=null;
+        if('getComputedStyle' in window){
+            val=getComputedStyle(curEle,false)[attr];
+        }else{
+            if(attr=='opacity'){//当用户传opacity时，在低级浏览器下应该取filter的值；
+                val=curEle.currentStyle['filter'];//alpha(opacity=10)
+                /*reg=/^alpha\(opacity[=:](\d+)\)$/i;
+                return reg.test(val)?reg.exec(val)[1]/100:1;*/
+                return /\d+/g.test(val)?val.match(/\d+/g)[0]/100:1;
+            }else{
+                val=curEle.currentStyle[attr];
+            }
+
+        }
+        var reg=/^([+-])?\d+(\.\d+)?(px|pt|rem|em)$/g;
+        //符合我们规则的值就parseFloat(),不符合直接用 val;
+        return reg.test(val)?parseFloat(val):val;
+    }
+    console.log(getCss(oDiv,'opacity'))
+</script>
+</body>
+</html>
+
+
+
+
+
+

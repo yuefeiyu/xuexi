@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            font-size: 100px;color: red;
+        }
+    </style>
+</head>
+<body>
+<script>
+    /*var oDate=new Date();
+   //alert(oDate.getFullYear())
+   //alert(oDate.getMonth())
+   //alert(oDate.getDate())
+   //alert(oDate.getDay())
+   alert(oDate.getSeconds())*/
+    function sj(n){
+        return n>=0&&n<10?'0'+n:''+n
+
+    }
+
+    getClock();
+    function getClock(){
+        var oDate=new Date();
+        var y=oDate.getFullYear()
+        var m=oDate.getMonth()+1;
+        var h=oDate.getHours();
+        var min=oDate.getMinutes();
+        var s=oDate.getSeconds();
+        var str=y+'年'+m+'月'+sj(h)+'时'+sj(min)+'分'+sj(s)+'秒';
+        document.body.innerHTML=str;
+    }
+    clearInterval(timer)
+    var timer=setInterval(getClock,1000)
+
+</script>
+</body>
+</html>

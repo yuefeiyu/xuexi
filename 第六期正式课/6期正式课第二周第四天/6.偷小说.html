@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<textarea name="" id="t1" cols="60" rows="20">
+<div class="para" label-module="para">小说：是四大文学样式(<a target=_blank href="/subview/1136/12828255.htm">散文</a>、<a target=_blank href="/subview/1942/8754835.htm">小说</a>、<a target=_blank href="/subview/656/5245651.htm">诗歌</a>、<a target=_blank href="/subview/43208/7537206.htm">戏剧</a>)之一，以塑造人物形象为中心，通过完整故事情节的叙述和具体的环境描写反映社会生活的一种<a target=_blank href="/view/454693.htm">文学体裁</a>，它是拥有完整布局、发展及主题的文学作品。 小说三要素是：人物、<a target=_blank href="/view/186606.htm">情节</a>、环境。</div>
+<div class="para" label-module="para">小说是文学的一种样式，一般描写人物故事，<a target=_blank href="/view/649339.htm">塑造</a>多种多样的人物形象，但亦有例外。</div>
+<div class="para" label-module="para">它是拥有完整布局、发展及主题的文学作品。而对话是不是具有鲜明的个性，每个人物说的话是不是有独特的语言风格，是衡量小说水平的一个重要标准。</div>
+<div class="para" label-module="para">“小说”一词最早出现于《庄子·<a target=_blank href="/view/2934866.htm">外物</a>》：「饰小说以干县令，其于大达亦远矣。」庄子所谓的「小说」，是指<a target=_blank href="/view/795785.htm">琐碎</a>的言论，与今日小说观念相差甚远。直至东汉<a target=_blank href="/view/34598.htm">桓谭</a>《<a
+
+
+
+
+        target=_blank href="/view/636684.htm">新论</a>》：「小说家合残丛小语，近取譬喻，以作短书，治身理家，有可观之辞。」<a target=_blank href="/view/9068.htm">班固</a>《<a target=_blank href="/view/18673.htm">汉书</a>．艺文志》将「<a target=_blank href="/subview/54531/5121983.htm">小说家</a>」列为十家之后，其下的定义为：「小说家者流，盖出于稗官，街谈巷语，<a target=_blank href="/view/81208.htm">道听途说</a>[4]之所造也。」才稍与今日小说的意义相近。而中国小说最大的特色，便自宋代开始具有<a target=_blank href="/view/1792400.htm">文言小说</a>与白话小说两种不同的小说系统。文言小说起源于先秦的街谈巷语，是一种小知小道的纪录。在历经<a target=_blank href="/view/469597.htm">魏晋南北朝</a>及隋唐长期的发展，无论是题材或人物的描写，文言小说都有明显的进步，形成笔记与传奇两种小说类型。而白话小说则起源于唐宋时期说话人的话本，<a target=_blank href="/subview/23054/9732510.htm">故事</a>的取材来自民间，主要表现了百姓的生活及思想意识。但不管文言小说或白话小说都源远流长，呈现各自不同的艺术特色。</div><div class="anchor-list"></div>
+</textarea>
+<input type="button" value="点击切换" id="btn"/>
+<textarea name="" id="t2" cols="60" rows="20"></textarea>
+</body>
+<script>
+    //点击按钮的时候，让t1里面内容添加到t2,标签都不存在
+    var oT1=document.getElementById('t1');
+    var oT2=document.getElementById('t2');
+    var oBtn=document.getElementById('btn');
+    oBtn.onclick=function(){
+        //获取oT1的内容，然后，通过正则和replace把替换后的内容放到t2;
+        var reg=/<[^<>]+>/g;
+        //var reg=/<[\.\s\S]+?>/g;
+        oT2.value=oT1.value.replace(reg,'')
+    }
+</script>
+</html>

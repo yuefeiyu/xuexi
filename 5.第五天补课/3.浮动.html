@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--
+如何让两个盒子在一行显示：
+1）浮动（最常用）
+2）定位
+3）display：inline-block（默认边距）
+4）display：inline
+-->
+
+<!--
+float：left
+float：right
+-->
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    ul{
+        list-style: none;
+    }
+    li{
+        float: left;
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        background: plum;
+        font-size: 30px;
+        color: white;
+    }
+    .clearfix:before,.clearfix:after{
+        content:'';
+        display: block;
+        clear: both;
+    }
+    /*
+    clear:both（左右）  清除浮动元素对其他元素的影响
+    clear：left（左）
+    clear：right（右）
+
+    float：none  设置为不浮动
+
+    */
+
+
+</style>
+<ul style="background: orange" class="clearfix">
+    <li>1</li>i
+    <l>2</l>
+    <li>3</li>
+    <li>4</li>
+</ul>
+<!--浮动元素的特点：-->
+<!--
+    1）脱离了正常的文档流
+    2)文字会围绕浮动元素排列
+    3）浮动的行内元素可以设置宽度和高度
+
+
+-->
+
+
+</body>
+</html>

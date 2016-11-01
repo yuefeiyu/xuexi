@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--表格-->
+<table  border="1" cellspacing="10" cellpadding="20">
+    <!--
+    标签属性
+    border  表格的边框 默认黑色
+    cellspacing单元格与单元格之间的距离   相当于单元格的外边距
+    cellpadding 单元格中的内容与单元格边框之间的距离  相当于单元格的内边距
+
+    -->
+    <!-- 文字水平居中-->
+    <caption>表格的标题</caption>
+
+    <!-- 表格的头部-->
+    <thead>
+    <!-- 行-->
+        <tr>
+            <!-- 列 th写在thead里  文字水平居中 默认加粗-->
+            <!-- colspan 合并列-->
+            <th>单元格</th>
+            <th colspan="2">单元格</th>
+
+            <!--<th>单元格</th>-->
+        </tr>
+    </thead>
+    <!-- 表格主体部分-->
+    <!-- 表尾  不常用-->
+    <tfoot>
+    <!-- 行-->
+        <tr>
+            <!-- 列-->
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+    </tfoot>
+    <tbody>
+
+        <tr >
+            <!-- 列-->
+            <td>第二行</td>
+            <td rowspan="2" colspan="2">第二行</td>
+            <!--<td>第二行</td>-->
+
+        </tr>
+        <tr >
+            <!-- 列-->
+            <!--<td>第三行</td>-->
+            <!--<td>第三行</td>-->
+            <td>第三行</td>
+        </tr>
+        <tr >
+            <!-- 列-->
+            <td>第三行</td>
+            <td>第三行</td>
+            <td>第三行</td>
+        </tr>
+    </tbody>
+
+
+
+</table>
+
+</body>
+</html>

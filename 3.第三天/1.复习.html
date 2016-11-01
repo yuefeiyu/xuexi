@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        /*css代码*/
+        .div1{
+            background: red;
+        }
+    </style>
+    <!-- 导入式-->
+    <style>
+        @import "css.css";
+    </style>
+    <!-- 项目中最常用-->
+    <link rel="stylesheet" href="css.css"/>
+</head>
+<body style="height: 3000px">
+css 层叠样式表
+css三中引入方式
+1）行内式:通过标签属性（style）去写入css样式  style="css属性;"
+css属性之间用;隔开
+<div style="width: 100px;height: 100px;" class="div1 div2" align="center"></div>
+2）内嵌式
+3）外链式
+
+css引入方式的优先级
+行内式>内嵌式
+行内式>外链式
+
+内嵌式和外链式比较
+同一个css属性 作用于同一个元素 谁在后边用谁的样式，后边的样式会覆盖前边的样式
+
+css选择器
+基本选择器
+1）标签选择器
+标签名{css属性名:"css属性值";}
+<p class="p1">习近平在学习十八届五中全会精神研讨班上讲话
+    学党章  社会安全生产  网信事业迈出坚实的一步  治国理政  国平</p>
+<style>
+    /*p{*/
+        /*color:red;*/
+        /*line-height: 30px;*/
+        /*border:1px solid orange;*/
+        /*width: 200px;*/
+    /*}*/
+</style>
+2)类选择器
+.className{}
+<style>
+    .p1{
+        /*text-indent: 36px;*/
+        text-indent: 2em;
+        /*首行缩进*/
+    }
+</style>
+3）id选择器
+<div id="div1">
+    div1
+</div>
+<style>
+    #div1{
+        width: 300px;
+        height: 200px;
+        background: orange;
+    }
+</style>
+4)通配符选择器
+*{}
+<style>
+    *{
+        /*display: none;*/
+        /*隐藏*/
+    }
+</style>
+
+5）类型选择器
+<input type="text"/>
+<input type="password"/>
+<style>
+    /*input[type=text]{
+        height: 100px;
+        border: 10px dashed yellow;
+        /!*dashed虚线*!/
+    }*/
+    input[type=text]:focus{
+        /*outline: none;*/
+        /*外边线*/
+        /*border: none;*/
+    }
+    input[type=password]{
+        background: red;
+    }
+</style>
+6)子代选择器
+<div>
+    <p>习近平在学习十八届五中全会精神<span>研讨班上讲话</span></p>
+</div>
+<style>
+    /*子代*/
+    div>p>span{font-size: 20px}
+    /*后代 最常用*/
+    div span{color: orangered}
+</style>
+7）交集选择器
+<ul>
+    <li>选项1</li>
+    <li class="list2">选项2</li>
+    <li class="list3 list4">选项3</li>
+    <li>选项4</li>
+</ul>
+<style>
+    li{color: aqua}
+    /*1*/
+    li.list2{color: red}
+    /*1+10=11*/
+    li.list4{color: yellow}
+    /*1+10=11*/
+    /*权重相同的情况下 后边的样式会覆盖前边的样式*/
+    /*        权重
+    标签选择器   1
+    类选择器     10
+    id选择器    100
+    */
+
+
+</style>
+
+8）并集选择器
+<div class="box1">div1</div>
+<div class="box2">div2</div>
+<style>
+    .box1,.box2{
+        color: red;
+    }
+</style>
+9)伪类选择器
+<a href="">超链接</a>
+<input type="text"/>
+<style>
+    a:hover{
+        text-decoration: none;
+        /*清除下划线*/
+    }
+    input[type=text]:focus{
+        background: url("1.jpg") no-repeat;
+        /*background-color: yellow;*/
+        background-size: 100px 100px;
+        height: 300px;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 350px;
+            border: 80px;
+            margin: 90px;
+            padding: 100px;
+        }/*box1顶部距离box2底部距离*/
+        .box2{
+            width: 50px;
+            height: 80px;
+            padding-bottom: 30px;
+            border-bottom: 40px;
+            border-left: 90px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="box1"></div>
+<div class="box2"></div>
+
+margin兼容问题
+1）上下结构的两个盒子（不浮动），上边的盒子设置margin-bottom，下边的盒子设置margin-top，发生margin值塌陷，谁大取谁的值
+2）IE6下浮动的块级元素，会产生双倍边距的bug
+解决方法：
+display：inline
+{
+    margin：10px；
+    _margin：5px；（ie6）
+    *margin：10px；（ie7）
+
+}
+margin：10px；
+margin：10px 20px
+        上下  左右
+margin：10px 20px 30px
+        上   左右  下
+margin：10px 20px 30px 40px(顺时针)
+        上   右    下    左
+
+padding代表的方向和margin是一样的
+
+
+<style>
+    div{
+        width: 100px;
+        height: 100px;
+        margin:100px 50px 100px 30px;
+        padding:50px 100px;
+        float: left;
+        border: 100px;
+    }/*div1左边距离div2左边的距离*/
+    div{
+        width: 100px;
+        height: 100px;
+        margin: 100px;
+        padding:100px;
+        float: left;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

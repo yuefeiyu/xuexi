@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{ margin: 0;
+        padding: 0;}
+        .box{
+            width: 480px;
+            margin: 50px auto;
+            position: relative;
+        }
+        .box img{
+            display: block;
+            float: left;
+            width: 150px;
+            margin-left: 10px;
+        }
+        .mark{
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            display: none;
+            width: 450px;
+
+        }
+        .mark img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+ <div class="box"id="box">
+     <img src="banner1.jpg" realImg="banner1.1.jpg" alt=""/>
+     <img src="banner2.jpg" realImg="banner2.2.jpg"alt=""/>
+     <img src="banner3.jpg" realImg="banner3.3.jpg"alt=""/>
+     <div class="mark">
+         <img src="banner1.jpg" alt=""/>
+     </div>
+ </div>
+ <script src="jquery-1.11.3.js"></script>
+ <script>
+     var $box=$('.box')
+     var $mark=$('.mark')
+     var $aImg=$box.children('img')
+     var $offset=$box.offset();
+     $aImg.mouseover(function(e){
+         var left= e.clientX-$offset.left+10;
+         var top= e.clientY-$offset.top+10;
+         var realImg=$(this).attr('realImg')
+         $mark.stop().show(500).css({left:left,top:top}).find('img').attr('src',realImg);
+     })
+     $aImg.mousemove(function(e){
+         var left= e.clientX-$offset.left+10
+         var top= e.clientY-$offset.top+10
+         var realImg=$(this).attr('realImg')
+         $mark.css({left:left,top:top})
+     })
+     $aImg.mouseout(function(){
+         $mark.stop().hide()
+     })
+
+ </script>
+</body>
+</html>

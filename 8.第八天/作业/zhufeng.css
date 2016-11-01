@@ -1,0 +1,33 @@
+*{padding: 0px;
+margin: 0px;
+font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Î¢ÈíÑÅºÚ", Arial, sans-serif;}
+a{text-decoration: none}
+.clearfix:after,.clearfix:before{content:"";display: block;clear: both}
+.clearfix{width: 460px;
+height: 494px;border: 1px solid #f5f5f5;
+margin: 0 auto}
+.top h2,h3{font-size: 16px;width:230px;height: 62px;
+float: left;line-height: 62px;
+text-align: center;color:#616161;font-weight: normal; }
+.top{width: 460px;height:63px; }
+h3{background:#f5f5f5 }
+ .l1{
+    width: 400px;height: 62px;margin:0 auto;margin-top:24px }
+.l1 .l2 label {font-size: 14px;
+    }
+.l2 {margin-bottom: 8px}
+.l3 input[type=text],.l3 input[type=password]{width: 345px;height: 33px;border: 1px solid #e1e1e1;border-radius: 1px;
+font-size: 14px;
+    padding-left: 12px;color: #919191 }
+.an{font-size: 14px;color: #616161;height: 14px }
+.l5 input{width:361px;height:38px;font-size: 14px;color: #fafcf8;background:#7cb132;border: 1px solid #608927;border-radius: 1px}
+.l1 span{font-size:14px;color: #333333;padding-right: 11px }
+.l1 .l6{color: #919191;border-left: 1px solid #919191;padding-left: 11px }
+.l1 a:hover .l8,.l1 a:hover
+.l7{color:#7cb132}
+.clearfix .l9,.l11{border-bottom: 1px solid #f1f1f1; width:135px;height: 51px }
+.l9,.l11,.l10{float: left}
+.clearfix .l12{width: 35px;height:35px;background:  url("qq.png") -55px 0px no-repeat;position: absolute;top: 34px;
+    left:23.5px;  }
+.clearfix .l10{width: 82px;height:69px;position: relative}
+.clearfix .l12:hover{background: url("qq.png")}

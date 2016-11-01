@@ -1,0 +1,14 @@
+*{margin: 0px;padding: 0px;
+font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;}
+ul{
+    list-style:none ; }
+a{text-decoration: none}
+.clearfix:before,.clearfixclear:after{content: ""  ;
+display: block;
+clear: both}
+li{float: left}
+.clearfix li img{width: 25px;height: 26px}
+.clearfix{width:1227px;height:79px;border-bottom:1px solid #e0e0e0}
+.l1{font-size: 16px}
+.l2{
+    font-size: 25px; }

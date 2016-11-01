@@ -1,0 +1,148 @@
+1.回到顶部思路总结：
+1）当点击按钮的时候，让滚动条匀速的回到顶部
+2）如何匀速？--公式的计算
+总距离 target --utils.win('scrollTop')
+总时间 duration --1000ms
+频率 interval --10ms
+求 步长 step=target/duration*interval
+3）开启一个定时器，每次获取最新的浏览器卷去的高度-step；然后重新赋值；
+注意点：什么时候关闭定时器？ 最新的浏览器卷去的高度=0；
+4）当浏览器卷去的高度>可视区的高度时，让按钮显示，否则，按钮隐藏
+5）当点击按钮的时候，让按钮立即消失；
+2.回到顶部--当划动鼠标滚轮时，立即停止运动
+1）在全局建立变量布尔值 var bOk=false;
+2)在setInterval里添加bOk=false;
+3)在window.onscroll里添加
+if(bOk){
+    clearInterval(timer)
+}
+bOk=true;
+注意：如果想实现“划动鼠标滚轮时，立即停止运动”；一定不能写之前点击按钮，让window.onscroll=null;因为这样滚动事件就被干掉；
+3.瀑布流
+1）封装一个rnd
+2）封装创建一个元素li,高度随机，背景色随机；然后返回这个li元素
+3）通过循环创建50个元素；每个元素分别插入最短的ul（类数组转数组，排序）里，每次往ary[0]里插入li;
+4)划动滚轮，满足一定条件时，插入50个元素
+条件 scrollBottom>document.body.scrollHeight-500
+
+2.关于日志需要写的几点：下周一之前交到github
+1）为什么来珠峰？你当时的初衷是什么？
+2）这五周你学到什么？你感觉哪里不足？问题，希望老师怎么改进，自己如何改进？
+3）期望的结果，以及自己该如何做？
+//下周三 把总结果的大家的问题，补课
+............................................................
+1.获取元素的方式
+id
+tagName
+className
+name
+document.documentElement
+document.body
+querySelector
+querySelectorAll
+2.节点类型
+
+节点        nodeType    nodeName  nodeValue
+文本节点        3          #text      文本内容
+元素节点        1          大写的标签名 null
+注释节点        8          #comment   注释内容
+document节点   9          #document   null
+3.节点关系
+parentNode
+childNodes
+children
+previousSibling
+nextSibling
+firstChild
+lastChild
+4.DOM动态创建
+1）创建一个新元素
+document.createElement
+obj.cloneNode(true)
+2)插入元素
+par.appendChild(curEle)
+par.insertBefore(curEle,oldEle)
+3)移出元素
+par.removeChild(curEle);
+4)替换元素
+par.replaceChild(curEle,oldEle);
+5.关于属性的操作
+1）. 和 []
+2)attribute 系列：
+    getAttribute();
+    setAttribute()
+    removeAttribute();
+................................................
+DOM库的封装
+1）获取元素
+1.getByClass：限定范围的通过class名去获取元素
+    1.有两个参数： curEle,strClass; 返回值：ary
+    2.首先判断高级浏览器，支持className--注意：把通过className取到的类数组转成数组
+    3.处理低级浏览器的兼容性
+        1.把字符串去除首尾空格，通过split切成数组 aryClass
+        2.获取当前元素下的所有元素 --通配符*
+        3.遍历每个元素，分别判断每个元素上是否有所有的aryClass名--假设法
+        4.等所有的大循环结束，返回一个数组
+2.hasClass：判断某个标签上是否有某个class名
+    两个参数：元素 ，class名(只验证一个class名是否有)
+    返回值：布尔值 test校验的结果就是布尔值
+    1）首先把传进来的class名进行去除首尾空格
+    2）写正则 new RegExp('\\b'+className+'\\b');
+    3)reg.test(curEle.className)
+3.addClass   '   box1    box2    box3    '
+    功能：如果元素身上没有这个名才给添加
+    两个参数：元素 className;
+    没有返回值，因为我们只是设置
+    1)首先把传进来的strClass进行去除首尾空格，并用split切成数组 aryClass
+    2）遍历aryClass里的每一项，判断元素身上如果没有这个class名（hasClass），才会添加;
+    注意：添加时，一定要加' '空格；
+4.removeClass
+    两个参数：元素 移出的className ‘str1 str2    str3     ’;
+    没有返回值；
+    1）aryClass
+    2)遍历aryClass,看元素身上有aryClass中的每一项，如果有，就删掉(替换成空)；
+5.getCss
+6.setCss：给某个元素的某个属性添加某个值；
+    只能设置行间样式
+    三个参数：curEle,attr,value;
+    没有返回值；
+7.setGroupCss :给一个元素添加一组样式
+    两个参数：curEle,options
+    没有返回值；
+
+8.css
+    参数：curEle
+    有返回值：分情况考虑
+    当我们取值的时候，有返回值
+    当设置的没有
+    1）判断第二个参数(arguments[1])是字符串还是对象
+    2）如果arguments[1]是个字符串
+        1）arguments[2]存在 ！==‘undefined’ 单个设置
+        2）arguments[2]不存在 获取
+    3）如果arguments[1]是个对象：设置一组元素
+9.win
+10.offset
+2)关于节点
+1.getChildren;
+2.prev
+3.prevAll
+4.next
+5.nextAll
+6.sibling
+7.siblings
+8.firstChild
+9.lastChild
+10.index
+11.appendChild
+12.prependChild
+13.insertBefore
+14.insertAfter
+
+......................................................
+关于惰性思想：
+它是JS高级编程技巧之一，在一个不销毁的私有作用域中，定义一个变量，保存我们的判断浏览器的布尔值；
+以后在需要判断浏览器的时候，只需要使用这个变量即可；
+
+
+
+

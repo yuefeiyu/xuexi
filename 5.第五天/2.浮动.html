@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        li{
+            width: 200px;
+            height: 200px;
+            background: red;
+            float: left;
+            margin: 10px;
+        }
+        .clearfix:after,.clearfix:before{
+
+            clear: both;
+            content: '';
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<ul class="ul1 clearfix" style="background: yellow">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+
+</ul>
+<ul class="ul2 clearfix" style="background: green">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+
+margin兼容
+上下结构的两个盒子（没有设置浮动），上边的盒子设置了margin-bottom
+下边的盒子设置margin-top，这两个值会重合，谁大取谁的值
+
+ie6下 浮动的块级元素 会产生双倍边距的bug
+1）display:inline
+2）{
+    margin:10px;
+    _margin:5px;(只针对ie6浏览器)
+    *margin：10px（针对ie7浏览器）
+}
+
+
+文档流：自然布局
+浮动元素特点：
+1）脱离了正常的文档流
+2）浮动元素在没有设置宽度和高度的情况下，宽度是内容的宽度，高度是内容高度（不区分行内元素，块级元素）
+3）文字会围绕浮动的元素
+
+clear：left  左浮动对其他元素的影响
+clear：right  右浮动对其他元素的影响
+clear:both   左右
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

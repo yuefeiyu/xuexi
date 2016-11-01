@@ -1,0 +1,639 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: '微软雅黑';
+    font-style: normal;
+}
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    outline: none;
+}
+
+.clearfix:before, .clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+body {
+    min-width: 1920px;
+    width: 100%;
+    height: 100%;
+}
+
+.wai {
+    width: 100%;
+    cursor: pointer;
+}
+
+.Tbox {
+    width: 100%;
+    height: 52px;
+    background: #303a40
+}
+
+.Tl {
+    width: 224px;
+    height: 50px;
+    float: left;
+    margin-left: 449px;
+}
+
+.Tl .Tl1 {
+    width: 111px;
+    height: 50px;
+    font-size: 24px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 51px;
+    padding-right: 12px;
+}
+
+.Tl .Tl1 img {
+    vertical-align: middle;
+    width: 31px;
+    padding-right: 7px;
+}
+
+.Tl .Tl1 i {
+    color: #5c5d61;
+    font-size: 22px;
+    padding-left: 12px;
+}
+
+.Tl li {
+    float: left;
+}
+
+.Tl2, .Tl3 {
+    font-size: 12px;
+    padding-right: 5px;
+    height: 52px;
+    line-height: 52px;
+}
+
+.Tl3:hover {
+    color: #ffffff;
+}
+
+.Tl2 {
+    color: #cccccc
+}
+
+.Tl3 {
+    color: #999999
+}
+
+.Tc {
+    margin-left: 57px;
+    width: 264px;
+    height: 50px;
+    float: left;
+    color: #ffffff;
+}
+
+.Tbox .Tc li {
+    width: 68px;
+    height: 50px;
+    float: left;
+    margin-left: 20px;
+    font-size: 14px;
+    color: #999999;
+    text-align: center;
+    line-height: 50px;
+}
+
+.Tbox .Tc .Tc1 {
+    color: #ffffff
+}
+
+.bg {
+    background: #3689b3;
+}
+
+.Tc li:hover {
+    background: #425a66;
+    color: #ffffff
+}
+
+.Tr {
+    margin-left: 296px;
+    width: 500px;
+    height: 50px;
+    float: left;
+}
+
+.Tbox .Tr li {
+    height: 50px;
+    float: left;
+    margin-left: 14px;
+    font-size: 12px;
+    color: #999999;
+    text-align: center;
+    line-height: 50px;
+}
+
+.Tbox .Tr li:hover {
+    color: #ffffff
+}
+
+.Tbox .Tr .m {
+    margin-left: 6px;
+}
+
+.Gz {
+    position: relative
+}
+
+.Tbox .Tr .Gz:hover .m div {
+    display: block
+}
+
+.Tbox .Tr .m div {
+    width: 321px;
+    height: 203px;
+    position: absolute;
+    background: #ffffff;
+    display: none;
+    margin-left: -79px;
+    z-index: 3;
+    border: 1px solid #8a9499;
+}
+
+.Tbox .Tr .m div .Gz1 {
+    position: absolute;
+    top: -12px;
+    left: 100px
+}
+
+.Tbox .Tr .m div span {
+    width: 332px;
+    height: 60px;
+    display: block;
+    border-bottom: 1px dashed #cccccc;
+    font-size: 20px;
+    color: #454545;
+    line-height: 60px;
+    text-align: left;
+    padding-left: 19px;
+}
+
+.Tbox .Tr .m div ul {
+    width: 302px;
+    height: 105px;
+    margin: 19px;
+}
+
+.Tbox .Tr .m div ul li {
+    float: left
+}
+
+.Tbox .Tr .m div ul .Gz2 {
+    width: 118px;
+    height: 115px;
+    margin-left: -10px;
+}
+
+.Tbox .Tr .m div ul .Gz3 {
+    float: left;
+    width: 143px;
+    height: 103px
+}
+
+.Tbox2 {
+    width: 100%;
+    height: 300px;
+    position: relative;
+
+}
+
+.Tbox2 .boxInner div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: 0;
+    opacity: 0;
+    filter: alpha(opacity:0);
+}
+
+.Tbox2 .boxInner div img {
+    width: 100%;
+    height: 100%;
+}
+
+.Tbox2 ul {
+    position: absolute;
+    right: 792px;
+    bottom: 28px;
+    z-index: 10;
+}
+
+.Tbox2 ul li {
+    width: 18px;
+    height: 18px;
+    float: left;
+    border-radius: 50%;
+    background: #ccc;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.Tbox2 ul li.bg {
+    background: #FFFFFF;
+}
+
+.Tbox3 {
+    width: 291px;
+    height: 249px;
+    position: absolute;
+    background: #7f7f7f;
+    z-index: 2;
+    top: 25px;
+    left: 1237px;
+}
+
+.Tbox3 .Zcz {
+    font-size: 12px;
+    color: #cccccc;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.Tbox3 input {
+    width: 260px;
+    height: 34px;
+    margin-left: 15px;
+    margin-top: 7px;
+    border-radius: 7px;
+}
+
+.Tbox3 .yzm {
+    width: 99px;
+    height: 34px;
+}
+
+.Tbox3 .gety {
+    float: right;
+    width: 150px;
+    height: 37px;
+    margin-right: 12px;
+    background: #3d9ccc;
+    font-size: 12px;
+    line-height: 37px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 7px;
+    border-radius: 1px;
+    border: 1px solid #6e6e6e;
+}
+
+.Tbox3 .mf {
+    display: block;
+    width: 260px;
+    height: 37px;
+    margin-left: 15px;
+    margin-top: 10px;
+    background: #3d9ccc;
+    font-size: 20px;
+    line-height: 37px;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: 1px;
+    border: 1px solid #6e6e6e;
+}
+
+.Tbox3 .gk {
+    width: 14px;
+    height: 14px;
+    margin-top: 0px;
+    vertical-align: middle;
+}
+
+.Tbox3 i {
+    display: inline-block;
+    height: 12px;;
+    font-size: 12px;
+    color: #bfbfbf;
+    margin-top: 13px
+}
+
+.Tbox3 .zh {
+    margin-left: 40px
+}
+
+.Tbox3 .dl {
+    float: right;
+    margin-right: 12px;
+    color: #f5aa00;
+}
+
+.Tbox4 {
+    width: 119px;
+    height: 142px;
+    position: absolute;
+    z-index: 2;
+    top: 105px;
+    left: 312px;
+    background: #FFFFFF;
+    font-size: 12px;
+    text-align: center
+}
+
+.Tbox4 img {
+    margin: 11px;
+    margin-bottom: 5px;
+}
+.Conbox{width: 1097px;
+height: 800px;margin-left: 431px;
+}
+.Conbox .ConboxL{
+    float: left;
+    margin-top: 30px;
+}
+.ConboxL input{width:668px;height:43px;vertical-align: top ;border: 1px solid #d9d9d9  }
+.Conbox .Cont{ display: inline-block;
+    background:url("../猎聘图片/icon-32_e46b3ba3.png")14px -61.5px no-repeat #3d9ccc; width: 46px;
+    height: 44px;}
+.Conbox .Cons{
+    display: inline-block;
+    width: 57px;
+    height: 44px;
+    font-size: 16px;
+    line-height: 44px;
+    background:#3d9ccc;
+    color:#ffffff ;
+    vertical-align: top;
+}
+.Conbox .ConboxR{float: right;
+    text-align: center;
+    line-height: 44px;
+    width: 291px;
+    height: 44px;
+    color: #9999a8;
+    background: #f6f6f6;
+    margin-top: 30px;
+                              }
+.Conbox .ConboxR span{
+    display: inline-block;
+    width: 21px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    background: #FFFFFF;
+}
+.Conbox .ConboxR i{
+    margin-right: 13px;
+    margin-left: 13px;
+}
+.Conbox .ConboxC{
+    display: inline-block;
+    width: 1097px;
+    height: 16px;
+    margin-top: 11px;
+}
+.Conbox .ConboxC span{
+    font-size: 16px;
+    margin-right:15px ;
+    color: #999999;
+    text-align: center;
+
+}
+.Conbox .ConboxM{
+    width: 1097px;
+    height: 24px;
+    margin-top: 39px;
+
+}
+.Conbox .ConboxM span{display: inline-block; width: 24px;height: 24px}
+.Conbox .ConboxM .h{
+    background:url("../猎聘图片/icons24_d2c9259b.png") 0px -575px no-repeat;
+}
+.Conbox .ConboxM .f{
+    background:url("../猎聘图片/icons24_d2c9259b.png") 0px -287px no-repeat;
+}.Conbox .ConboxM .j{
+     background:url("../猎聘图片/icons24_d2c9259b.png") 0px -361px no-repeat;
+ }.Conbox .ConboxM .x{
+      background:url("../猎聘图片/icons24_d2c9259b.png") 0px -192px no-repeat;
+  }.Conbox .ConboxM .q{
+       background:url("../猎聘图片/icons24_d2c9259b.png") 0px -95px no-repeat;
+   }.Conbox .ConboxM .y{
+        background:url("../猎聘图片/icons24_d2c9259b.png") 0px -744px no-repeat;
+    }
+.Conbox .ConboxM b{
+    font-size: 16px;
+    vertical-align: 7px; 
+    color: #666666;
+    height: 43px;
+    line-height: 43px;
+    display: inline-block;
+    text-align: center;
+}
+.Conbox .ConboxM a{
+   display: inline-block;
+    border-right: 1px dashed #999999;
+    width: 173px;
+    height: 36px;
+}
+.Conbox .ConboxM .m26{
+    margin-left: 26px
+}
+.Conbox .ConboxM .mk{
+    border-right: none;
+}
+.Conbox .ConboxM p{
+    width: 158px;
+    height: 56px;
+    padding-left: 10px;
+    margin-top: -11px;
+    text-align: center;
+    line-height: 75px;
+}
+.Conbox .ConboxM a:hover p,.Conbox .ConboxM a:hover b{
+    background: #ffaa00;
+    color: #FFFFFF;}
+
+.Conbox .ConboxM a:hover p .h{
+    background:url("../猎聘图片/icons24_d2c9259b.png") 0px -554px no-repeat;
+}.Conbox .ConboxM a:hover p .f{
+    background:url("../猎聘图片/icons24_d2c9259b.png") 0px -266px no-repeat;
+}.Conbox .ConboxM a:hover p .j{
+    background:url("../猎聘图片/icons24_d2c9259b.png") 0px -338px no-repeat;
+}.Conbox .ConboxM a:hover p .x{
+    background:url("../猎聘图片/icons24_d2c9259b.png") 0px -171px no-repeat;
+}.Conbox .ConboxM a:hover p .q{
+    background:url("../猎聘图片/icons24_d2c9259b.png") 0px -74px no-repeat;
+}.Conbox .ConboxM a:hover p .y{
+    background:url("../猎聘图片/icons24_d2c9259b.png") 0px -723px no-repeat;
+}
+
+.Conbox .itCon {
+    margin-top: 39px;
+    height: 356px;
+    margin-bottom: 30px
+}
+
+.Conbox .itCon .left-part {
+    background-color: #f5f5f5;
+    overflow: hidden;
+    width: 204px;
+    padding: 0 23px;
+    float: left;
+    height: 353px
+}
+
+.Conbox .itCon  .left-part {
+    border-top: 5px solid #3ca2f2
+}
+
+.Conbox .left-part h2 a {
+    color: #3ca2f2
+}
+.icons24 {
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    margin-top: -3px;
+    margin-right: .3em;
+    background: url(../猎聘图片/icons24_d2c9259b.png)0px -600px;
+}
+
+
+
+
+
+.itCon .left-part h2 {
+    font-weight: 400
+}
+
+.Conbox .itCon .left-part h2 a:hover {
+    opacity: .8
+}
+
+.Conbox .itCon .left-part .industry-side {
+    font-size: 14px;
+    color: #666;
+    border-top: 1px dotted #cfd2e2;
+    padding: 8px 0;
+    overflow: hidden
+}
+
+.Conbox .itCon .left-part .industry-side a {
+    display: inline-block;
+    line-height: 31px;
+    color: #666666;
+}
+
+.Conbox .itCon .left-part .industry-jobs {
+    height: 120px
+}
+
+.Conbox .itCon .left-part .industry-jobs a {
+    min-width: 95px;
+    vertical-align: middle
+}
+
+.Conbox .itCon .left-part .industry-companies {
+    height: 60px
+}
+
+.Conbox .itCon .left-part .industry-companies a {
+    min-width: 64px
+}
+
+.Conbox .itCon .left-part .btn-enter {
+    display: block;
+    margin-top: 55px;
+    background-color: #fff;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #ccc;
+    color: #f50
+}
+
+.Conbox .itCon .left-part .btn-enter:hover {
+    border: 1px solid #f50
+}
+
+ .itCon .right-part {
+    height: 100%;
+    border: 1px solid #ddd;
+    border-left: none;
+    overflow: hidden
+}
+
+.Conbox .itCon .right-part li {
+    margin-left: 24px;
+    width: 370px;
+    float: left;
+    margin-top: -1px;
+    border-top: 1px solid #f5f5f5
+}
+
+.Conbox .itCon .right-part li .company-logo {
+    float: left;
+    margin-left: 10px;
+    margin-top: 4px
+}
+.Conbox .itCon .right-part li .tinyELogo{
+    display: block;
+    width: 152px;
+    height:85px;
+
+}
+.Conbox .itCon .right-part li .job-detail {
+    margin-left: 179px;
+    margin-top: 24px;
+    display: block;
+}
+
+.Conbox .itCon .right-part li .job-detail a {
+    display: block;
+    width: 190px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.Conbox .itCon .right-part li .job-detail a:hover {
+    text-decoration: underline
+}
+
+.Conbox .itCon .right-part li .job-detail .job-title a {
+    color: #0077b3;
+    font-size: 16px
+}
+
+.Conbox .itCon .right-part li .job-detail .job-salary {
+    color: #ee5f03;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis
+}
+
+.Conbox .itCon .right-part li .job-detail .job-salary span {
+    color: #666;
+    font-size: 12px;
+    margin-left: 8px
+}
+
+.Conbox .itCon .right-part li .job-detail .company-name a {
+    color: #999;
+    font-size: 12px
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var ary=[12,43,56];
+    var obj={}
+    Array.prototype.myForEach=function(callback,context){
+        context=context||window;
+        if('forEach' in Array.prototype){
+            this.forEach(callback,context);
+            return;
+        }
+        for(var i=0; i<this.length; i++){
+            callback.call(context,this[i],i,this)
+        }
+    };
+    ary.myForEach(function(item,index,input){
+        console.log(this===window)
+    },obj)
+</script>
+</body>
+</html>

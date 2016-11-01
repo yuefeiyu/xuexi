@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var str='zhufeng2016huigu2015zhanwan2017';
+    var reg=/\d+/g;
+    /*console.log(reg.exec(str))
+    console.log(reg.exec(str))*/
+    /*var ary=[];
+    var res=reg.exec(str);
+    while(res){
+        //1.把每次捕获到的内容（数组的索引为0的这一项内容）放进数组；
+        ary[ary.length]=res[0];
+        //2.继续往上找
+        res=reg.exec(str);
+    }
+    console.log(ary)*/
+    //match功能：把所有符合规则的内容都放在数组中返回；
+    //match核心思想用exec来实现，而我们又知道exec每次只能捕获一项，while不断的捕获
+    String.prototype.myMatch=function(reg){
+        //this-实例；
+        var ary=[];
+        var res=reg.exec(this);
+        while(res){
+            ary[ary.length]=res[0];
+            res=reg.exec(this);
+        }
+        return ary;
+    }
+</script>
+</body>
+</html>

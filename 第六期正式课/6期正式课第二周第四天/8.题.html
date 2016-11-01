@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    /*var str='20160514';
+    var ary=['零','壹','贰','叁','肆','伍','陆','柒','捌','玖'];
+    str=str.replace(/\d/g,function(){
+        //把匹配到的每个数字做为数组的索引，找出对应的内容，替换掉以前的数字；
+        return ary[arguments[0]]
+    })*/
+    var str='全日制第七期学费:14800';
+    var ary=['零','壹','贰','叁','肆','伍','陆','柒','捌','玖'];
+    str=str.replace(/(?:\d)/g,function(){
+        console.log(arguments)
+        return ary[arguments[0]]
+    })
+</script>
+</body>
+</html>

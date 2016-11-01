@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+    width：内容的宽度
+    height：内容的高度
+整个盒子的宽度：width+(padding-left)+(padding-right)+(border-left)+(border-right)
+整个盒子的高度：height+(padding-top)+(padding-bottom)+(border-top)+(border+bottom)
+
+margin:10px;
+margin:10px 20px;
+        上下 左右
+margin:10px 20px 30px;
+        上   左右  下
+margin：10px 20px  30px 40px
+        上    右   下    左  （顺时针）
+
+padding和margin代表方向是相同
+
+元素的特点
+块级元素：独占一行，可以设置宽度和高度
+行内元素：会在一行显示 ，不可以设置宽度和高度
+行内块级元素： 会在一行显示，可以设置宽度和高度
+    读取代码中的空格和回车，会在浏览器中有间隙
+
+img，input
+    <img src="img_03.jpg" alt=""/><!--
+    --><input type="text"/>
+    <style>
+        img,input{
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+display:
+    inline-block;  行内块级元素的属性
+    inline;   行内元素的属性
+    block;    块级元素的属性
+
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            padding: 50px;
+
+            width: 300px;
+            /*height: 300px;*/
+            border: 1px solid red;
+
+        }
+        p{
+            width:300px;
+            /*margin: 50px;*/
+            overflow-x:hidden;
+            /*溢出隐藏*/
+            height: 200px;
+        }
+    </style>
+<div>
+    <p>少女时代泰妍7月首尔开个唱 追加釜山站翡翠恋人》“热”拍 宋妍霏片场欢乐多《翡翠恋人》“热”拍 宋妍霏片场欢乐多翡翠恋人》“热”拍 宋妍霏片场欢乐多《翡翠恋人》“热”拍 宋妍霏片场欢乐多少女时代泰妍7月首尔开个唱 追加釜山站翡翠恋人》“热”拍 宋妍霏片场欢乐多《翡翠恋人》“热”拍 宋妍霏片场欢乐多翡翠恋人》“热”拍 宋妍霏片场欢乐多《翡翠恋人》“热”拍 宋妍霏片场欢乐多少女时代泰妍7月首尔开个唱 追加釜山站翡翠恋人》“热”拍 宋妍霏片场欢乐多《翡翠恋人》“热”拍 宋妍霏片场欢乐多翡翠恋人》“热”拍 宋妍霏片场欢乐多《翡翠恋人》“热”拍 宋妍霏片场欢乐多</p>
+</div>
+
+能用padding 就不用margin
+margin兼容问题：
+1）上下结构的两个盒子(并且不设置浮动)，上边的盒子设置margin-bottom,下边的盒子设置margin-top，这样会出现margin值塌陷（重合），谁大取谁的值
+    浮动的上下结构的盒子，会叠加
+2）IE6下 浮动的（float）块级元素设置margin值 会出现双倍边距的bug
+解决方法：display:inline
+    div{
+        margin:10px;
+        _margin:5px;(只针对ie6浏览器)
+    }
+
+ps快捷键
+ 新建   ctrl+N
+ 放大   z  alt（切换放大缩小的状态）
+选区    m
+切片工具 c  （shift+c  切换）
+保存    shift+alt+ctrl+s
+        文件-->存储为web所用格式
+拖动图片  空格
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

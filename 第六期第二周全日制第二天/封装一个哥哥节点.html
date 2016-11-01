@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+</ul>
+<body>
+<script>
+    var oUL = document.getElementsByTagName('ul')[0]
+    var aLi = oUL.getElementsByTagName('Li')
+    function prev(curEle) {
+        if ('previousElementSibling'in curEle) {
+           return curEle.previousElementSibling;
+//                           (只有高级浏览器有)
+        }
+        var prev = curEle.previousSibling;
+        while (prev && prev.nodeType !== 1) {
+            prev = prev.previousElementSibling
+        }
+        return prev
+    }
+   var oAo=prev(aLi[4]).innerHTML
+    console.log(prev(aLi[4]))
+</script>
+
+</body>
+</html>

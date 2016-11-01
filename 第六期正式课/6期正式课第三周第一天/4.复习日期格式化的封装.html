@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    /*
+    * 1)把str变成一个数组
+    * 2）正则把strTmp中数字捕获出来，做为数组的索引，取出数组对应的内容
+    * 3）返回值：已经匹配好的模板；
+    * */
+    var str='2016-6-27 12:2:30';
+    var strTmp='{0}年{1}月{2}日';
+    String.prototype.myDateFormat=function(strTmp){
+        //this -> str
+        strTmp=strTmp||'{0}年{1}月{2}日 {3}:{4}:{5}';
+        var ary=this.match(/\d+/g);//把字符串里面的数字都匹配出来，以一个数组的形式返回；["2016", "6", "27", "12", "2", "30"]
+        return strTmp.replace(/{(\d)}/g,function(){
+            console.log(arguments)
+            var tmp=ary[arguments[1]];//把小分组中拿到的数字做为数组的索引，拿到数组对应的值；
+            tmp=tmp>=0&&tmp<10?'0'+Number(tmp):tmp;//当tmp为一位数字的时候，自动补0;
+            return tmp;//replace的作用就是用第二个参数的返回值去替换第一个参数正则捕获到的内容；
+        })
+
+    };
+   console.log(str.myDateFormat(strTmp));
+</script>
+</body>
+</html>

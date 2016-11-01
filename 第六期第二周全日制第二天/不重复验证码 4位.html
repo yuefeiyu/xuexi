@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var strCode = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    var str = '';
+    var ary = [];
+    while (ary.length < 4) {
+        var rnd = Math.round(Math.random() * 61)
+    if (ary.indexOf(rnd) === -1) {
+        ary.push(rnd);
+        str += strCode.charAt(rnd);
+    }
+    }
+    document.body.innerHTML=str
+</script>
+</body>
+</html>

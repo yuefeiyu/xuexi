@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .div1{
+            width: 200px;
+            height: 200px;
+            margin-bottom: 300px;
+            padding-top:100px ;
+            background: red;
+        }/*div1顶部距离div2底部的距离*/
+        .div2{
+            width: 300px;
+            height: 100px;
+            padding-top: 200px;
+            background: yellow;
+        }
+
+    </style>
+</head>
+<body style="height: 3000px">
+<div class="div1"></div>
+<div class="div2"></div>
+
+<!--
+margin:10px;  四个方向的距离
+
+margin:10px 20px;
+       上下各10px  左右各20px
+
+margin:10px 20px 30px;
+        上  左右各20px  下
+
+margin:10px 20px 30px 40px;
+        上  右   下   左    （顺时针）
+
+
+-->
+<!--
+margin兼容性问题
+1）有两个盒子，上边的盒子设置了margin-bottom  下边的何止设置margin-top,这个两值会放生margin值塌陷，谁大取谁的值
+
+-->
+<style>
+    .box1,.box2{width: 200px;height: 200px;border: 1px solid red}
+    .box1{margin-bottom: 200px}
+    .box2{margin-top: 100px}
+</style>
+<div class="box1">box1</div>
+<div class="box2">box2</div>
+<!--
+2)IE6下，浮动的块级元素设置margin值 会出现双倍边距的bug
+解决方法： display:inline  (把块级元素转换为行内元素)
+margin：10px;
+_margin：5px;（只针对IE6）
+
+display:block
+
+
+-->
+<style>
+    .con1{
+        background: red;
+        display: inline;
+        /*将块级元素转换为行内元素*/
+    }
+    .span1{
+        background: orange;
+        display: block;
+        /*将行内元素转换为块级元素*/
+
+    }
+    .span2{
+        background: green;
+        display: inline-block;
+        width: 300px;
+    }
+</style>
+<div class="con1">div1</div>
+<span class="span1">span1</span>
+
+<!--display:inline-block;  行内块级元素-->
+<span class="span2">span2</span>
+<span>span3</span>
+
+
+
+</body>
+</html>

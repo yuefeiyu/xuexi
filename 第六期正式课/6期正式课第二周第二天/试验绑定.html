@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        ul{
+            width: 400px;
+            padding:20px;
+            border: 5px solid lightgreen;
+            box-shadow: 4px 4px 10px darkGreen;
+            margin:30px auto;
+
+        }
+        span{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: red;
+            color: #fff;
+            text-align: center;
+            line-height: 20px;
+            margin-right: 10px;
+        }
+        li{
+            height: 40px;
+            line-height: 40px;
+            font-size: 20px;
+            border-bottom: 1px dashed #ccc;
+            /*句子后面多余部分变为... 3步*/
+            /*强制不换行*/
+            white-space: nowrap;
+            /*多余部分变为...*/
+            text-overflow: ellipsis;
+            /*溢出隐藏*/
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><span>0</span>从习近平讲话看下一步反腐倡廉工作着力点</li>
+    <li><span>1</span>从习近平讲话看下一步反腐倡廉工作着力点</li>
+    <li><span>2</span>从习近平讲话看下一步反腐倡廉工作着力点</li>
+</ul>
+<script src="json1.js"></script>
+<script>
+   var oUl=document.getElementsByTagName('ul')[0];
+    var aLi=oUl.getElementsByTagName('li');
+    for(var i=0;i<aLi.length;i++){
+        aLi[i].onmousemove=function(){
+            this.style.backgroundColor="pink"
+        }
+        aLi[i].onmouseout=function(){
+            this.style.backgroundColor=""
+        }
+
+   }
+    var frg=document.createDocumentFragment()
+    for(var i=0;i<ary.length;i++){
+        var oLi=document.createElement('li')
+        oLi.innerHTML='<Span>'+(i+3)+'</Span>'+ary[i].desc
+        frg.appendChild(oLi)
+    }
+    oUl.appendChild(frg)
+    frg=null
+</script>
+</body>
+</html>

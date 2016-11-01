@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var str='zhufeng123peixun456lksfjkdlfksdj3456';
+    var reg=/\d+/g;
+    //match功能：批量捕获 返回值-ary;
+    //match核心思想：exec；
+    String.prototype.myMatch=function(reg){
+        var ary=[];
+        var res=reg.exec(this);
+        while(res){
+            ary.push(res[0]);
+            res=reg.exec(this);
+        }
+        return ary;
+    }
+    var ary=str.myMatch(reg);
+</script>
+</body>
+</html>

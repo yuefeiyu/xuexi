@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{margin: 0;padding: 0}
+        ul{list-style: none}
+        ul{position: fixed;top: 100px;background: red;width: 100px}
+        ul li{height: 100px}
+        ul li a{ font-size: 30px;color: white}
+        div{height: 600px}
+        .div1{background: orangered}
+        .div2{background: yellow}
+        .div3{background: green}
+        .div4{background: blue}
+    </style>
+</head>
+<body>
+<ul>
+    <li><a href="#a">橙色</a></li>
+    <li><a href="#b">黄色</a></li>
+    <li><a href="#c">绿色</a></li>
+    <li><a href="#d">蓝色</a></li>
+    <li><a href="#">回到顶部</a></li>
+</ul>
+<div class="div1" id="a"></div>
+<div class="div2" id="b"></div>
+<div class="div3" id="c"></div>
+<div class="div4" id="d"></div>
+
+<!--target="_blank"  在新的窗口中打开
+    _self在当前窗口中打开
+-->
+<a href="http://www.baidu.com" target="_blank">超链接</a>
+<style>
+    a:visited{
+        /*访问之后的状态*/
+    }
+    a:hover{
+        /*鼠标经过时的状态*/
+        color: red;
+    }
+    a:link{
+        /*默认的状态*/
+    }
+    a:active{
+        /*激活时的状态*/
+    }
+
+    li:hover div{
+
+    }
+    li:hover,.list2:hover p div {
+
+    }
+    ul li{
+        float: left;
+    }
+    .clearfix:after{
+        clear: both;
+        display: block;
+        content: '';
+    }
+</style>
+<input type="text"/>
+<ul class="clearfix">
+    <li>
+        <div></div>
+    </li>
+    <li class="list2"></li>
+
+</ul>
+
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 300px;
+            list-style: none;
+            border: 1px solid black;
+            margin: 0 auto;
+            /*让一个结构水平剧中*/
+        }
+        li{
+            position: relative;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+            border: 1px solid transparent;
+        }
+        li:hover{
+            border: 1px solid red;
+        }
+        li:hover span{
+            display: block;
+        }
+        li span{
+            display: none;
+            position: absolute;
+            top:30px;
+            left:45px;
+            width: 200px;
+            height: 0;
+            border: 10px solid transparent;
+            border-left: 10px solid red;
+            border-right: 10px solid red;
+
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>
+        <span></span>首页
+    </li>
+    <li>
+        <span></span>热门课程
+    </li>
+    <li>
+        <span></span>特色培训
+    </li>
+</ul>
+
+</body>
+</html>

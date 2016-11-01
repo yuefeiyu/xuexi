@@ -1,0 +1,121 @@
+*{
+    padding:0;
+    margin: 0;
+    font-family:  "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    border: none;
+    display: block;
+}
+.clearfix:before,.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.box{
+    width: 1226px;
+    min-width: 1226px;
+    margin: 0 auto;
+}
+h3{
+    color: #333333;
+    font-size: 22px;
+    font-weight: normal;
+}
+ul{
+    margin-top: 19px;
+}
+li{
+    position: relative;
+    width: 296px;
+    height: 372px;
+    border-top: 1px solid #ffac13;
+    padding-top: 47px;
+    text-align: center;
+}
+li h4{
+    font-size: 16px;
+    color: #ffac13;
+    padding-bottom: 23px;
+}
+li h5{
+    font-size: 22px;
+    color: #333333;
+    font-weight: normal;
+}
+li p{
+    width: 195px;
+    height: 38px;
+    padding: 9px 50px 12px ;
+    line-height: 20px;
+    font-size: 12px;
+    color: #b0b0b0;
+}
+li span{
+    color: #333333;
+    font-size: 12px;
+}
+li img{
+    width: 216px;
+    height: 154px;
+    margin: 10px 40px 0;
+}
+li div{
+    margin:25px 0 0  92px;
+}
+li div i{
+    float: left;
+    width: 6px;
+    height: 6px;
+    border:2px solid #ffffff;
+    background: #b0b0b0;
+    border-radius: 50%;
+    margin-right: 24px;
+}
+li div .on{
+    border: 2px solid #ff6700;
+    background:transparent;
+}
+li div i:hover{
+    background:#ff6700 ;
+    cursor: pointer;
+}
+li div .on:hover{
+    background:#ffffff;
+}
+li:hover{
+    box-shadow: 0 5px 30px rgba(0,0,0,.3);
+    top:-5px;
+    transition: all .4s;
+}
+li:hover .btnL,li:hover .btnR{
+    display: block;
+}
+li .btnL,li .btnR{
+    display: none;
+    position: absolute;
+    top:191px;
+    width: 20px;
+    height: 40px;
+    line-height: 40px;
+    background: #d9d9d9;
+    color: #ffffff;
+}
+li .btnL{
+    left:0;
+}
+li .btnR{
+    right: 0;
+}
+li .btnL:hover,li .btnR:hover{
+    background: #8d8d8d;
+}
+li .image:visited{
+    border: 10px solid blue;
+}

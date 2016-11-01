@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var str='2016-6-24 9:32:58';
+    //思路2：match
+    //var ary=str.match(/\d+/g);//match 兼容；
+    //思路1：严格匹配；
+    /*var reg=/^(\d{4})[-/](\d{1,2})[-/](\d{1,2}) (\d{1,2}):(\d{1,2}):(\d{1,2})$/g;
+    var ary=[];
+    str.replace(reg,function(){
+        ary=Array.prototype.slice.call(arguments,1,arguments.length-2)
+    })
+    console.log(ary)*/
+    //思路3：前面1到多的数字 每个数字的后面有可能是 - / \s : $
+   // var reg=/(\d+)([-/\s:]|$)/g;
+    //思路4：
+    var reg=/(\d+)(\D|$)/g;
+    var ary=[];
+    str.replace(reg,function($0,$1){
+        ary[ary.length]=$1;
+    })
+    console.log(ary)
+</script>
+</body>
+</html>

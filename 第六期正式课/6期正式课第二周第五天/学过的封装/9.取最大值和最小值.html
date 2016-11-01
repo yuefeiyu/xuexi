@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var ary=[12,9,23,8,4,2];
+    //思路1：sort
+    /*ary.sort(function(a,b){
+        return a-b;
+    })
+    var min=ary[0];
+    var max=ary[ary.length-1]*/
+    //思路2：eval+字符串拼接+Math.max()
+    /*var str=ary.join(',');
+    var str2='Math.max('+str+')';
+    var max=eval(str2)*/
+    //思路3：apply+Math.max()
+    //var max=Math.max.apply(undefined,ary)
+    //思路4：假设法
+    var max=ary[0];
+    var min=ary[0];
+    for(var i=1; i<ary.length; i++){
+        if(ary[i]>max) max=ary[i];
+        if(ary[i]<min) min=ary[i];
+    }
+</script>
+</body>
+</html>

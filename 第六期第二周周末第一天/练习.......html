@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box{width: 100px;height: 100px;background: red}
+        #div1{width: 100px;height: 100px;background: green}
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+<script>
+    var oDiv1=document.getElementById('div1')
+    var oDiv2=document.createElement('div')
+    oDiv2.className='box';
+    document.body.insertBefore(oDiv2,oDiv1)
+    oDiv2.onclick=function(){ this.parentNode
+
+    }
+</script>
+</body>
+</html>

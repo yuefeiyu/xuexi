@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: red;
+            float: left;
+            opacity:0.1;
+            filter:alpha(opacity:10)
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+<script>
+    var oDiv=document.getElementById('div1');
+    //高级浏览器 getComputedStyle(obj,false)[attr];
+    //低级浏览器 obj.currentStyle[attr]
+    //getCss:从某个元素的非行间样式上获取某个样式值
+    alert(getCss(oDiv,'float'))
+    function getCss(curEle,attr){
+        var val,reg;
+        if('getComputedStyle' in window){
+            if(curEle.currentStyle){
+                return curEle.currentStyle[attr];
+            }
+            val=getComputedStyle(curEle,false)[attr];
+        }else{
+            if(attr==='opacity'){
+                //当用户给低级浏览器传opacity这个属性名的时候，实际上我们求的是filter的值--alpha(opacity:10)
+                val=curEle.currentStyle['filter'];//alpha(opacity:10);
+                reg=/^alpha\(opacity[:=](\d+)\)$/;
+                return reg.test(val)?RegExp.$1/100:1;
+            }else{
+                val=curEle.currentStyle[attr];
+            }
+        }
+        /*if(curEle.currentStyle){
+            if('getComputedStyle' in window){
+                val=curEle.currentStyle[attr];
+            }else{
+                if(attr==='opacity'){
+                    //当用户给低级浏览器传opacity这个属性名的时候，实际上我们求的是filter的值--alpha(opacity:10)
+                    val=curEle.currentStyle['filter'];//alpha(opacity:10);
+                    reg=/^alpha\(opacity[:=](\d+)\)$/;
+                    return reg.test(val)?RegExp.$1/100:1;
+                }else{
+                    val=curEle.currentStyle[attr];
+                }
+            }
+        }else{
+            val=getComputedStyle(curEle,false)[attr]
+        }*/
+        //去单位
+        reg=/^([+-])?\d+(\.\d+)?(px|pt|em|rem)$/;
+        return reg.test(val)?parseFloat(val):val;
+    }
+</script>
+</body>
+</html>

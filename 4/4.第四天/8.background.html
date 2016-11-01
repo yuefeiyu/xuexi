@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{margin: 0;padding: 0}
+        div{
+            margin-left: 100px;
+            width: 500px;
+            height: 500px;
+            background-color:yellow ;
+            background-image: url("img1.jpg");
+            background-repeat: no-repeat;
+            /*重复 repeat
+                  no-repeat不重复
+                  repeat-x  水平方向重复
+                  repeat-y  垂直方向重复
+            */
+            background-position: right bottom;
+                                  /*左    上*/
+            /*                    左移- 右+ 上-  下+         */
+            background-position: -100px 20px;
+            background: yellow url("img1.jpg") -100px 0px no-repeat;
+            /*          颜色     图片路径       距离左边 距离上边 是否重复*/
+
+
+        }
+    </style>
+</head>
+<body>
+<div>
+
+</div>
+
+</body>
+</html>

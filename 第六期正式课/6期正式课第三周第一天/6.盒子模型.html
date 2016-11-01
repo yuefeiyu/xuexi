@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #div{
+            width: 200.222px;
+            height: 200px;
+            padding:10.333px;
+            position: relative;
+            left:0;
+            top:0;
+        }
+        #div2{
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            left: 220px;
+            border:10px solid red;
+        }
+    </style>
+</head>
+<body style="height: 2000px">
+<div id="div">
+    <div id="div1">
+        <div id="div2">
+            <div id="div3">就业是我们的强项，平均就业工资超过12K。不但让你找到工作，还要能胜任工作。郑重承诺:工资低于9K退学费。就业是我们的强项，平均就业工资超过12K。不但让你找到工作，还要能胜任工作。郑重承诺:工资低于9K退学费。就业是我们的强项，平均就业工资超过12K。不但让你找到工作，还要能胜任工作。郑重承诺:工资低于9K退学费。就业是我们的强项，平均就业工资超过12K。不但让你找到工作，还要能胜任工作。郑重承诺:工资低于9K退学费。就业是我们的强项，平均就业工资超过12K。</div>
+        </div>
+    </div>
+</div>
+<script>
+    var oDiv=document.getElementById('div');
+    var oDiv2=document.getElementById('div2');
+    //console.log(oDiv.offsetWidth)
+   // console.log(oDiv.clientLeft)
+    //console.log(oDiv.scrollHeight)
+    console.log(oDiv.clientWidth)
+</script>
+</body>
+</html>

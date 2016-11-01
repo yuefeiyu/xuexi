@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<script>
+    var oUl=document.getElementsByTagName('ul')[0];
+    function getChild(curEle){
+        var ary=[];
+        var aChild=curEle.childNodes;
+        for(var i=0; i<aChild.length; i++){
+            if(aChild[i].nodeType===1){
+                ary[ary.length]=aChild[i];
+            }
+        }
+        return ary;
+    }
+    console.log(getChild(oUl))
+</script>
+</body>
+</html>

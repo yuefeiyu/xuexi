@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.clearfix:before,.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.header{
+    height: 40px;
+    background: #333333;
+    width:100%;
+}
+.nav{
+    width: 1226px;
+    margin: 0 auto;
+}
+.nav .navL{
+    float: left;
+}
+.nav ul li{
+    float: left;
+    font-size: 12px;
+    color: #424242;
+    margin-right: 5px;
+    line-height: 40px;
+}
+.nav ul li a{
+    color: #b0b0b0;
+}
+.nav ul li a:hover{
+    color: #ffffff;
+}
+.nav .navR{
+    float: right;
+}
+.nav .navR ul{
+    float: left;
+}
+.navR .cart{
+    float: left;
+    width: 83px;
+    height: 40px;
+    background: #424242;
+    padding: 0 20px 0 17px;
+}
+.navR .cart:hover{
+    background: #ffffff;
+}
+.navR .cart:hover i{
+    color: #ff761a;
+}
+.navR .cart:hover span{
+    background-position: -23px 0;
+}
+.navR .cart i{
+    font-size: 12px;
+    color: #b0b0b0;
+    font-style: normal;
+    line-height: 40px;
+}
+.navR .cart span{
+    background: url("icon.png") no-repeat;
+    display: inline-block;
+    width: 20px;
+    height: 16px;
+    vertical-align: middle;
+}

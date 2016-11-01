@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*div{*/
+            /*height: 300px;*/
+            /*border: 1px solid red;*/
+        /*}*/
+        h3{
+            background: yellow;
+            text-decoration: underline;
+            /*添加下划线*/
+        }
+        a{
+            /*text-decoration: none;*/
+            /*清除a自带的下划线*/
+        }
+    </style>
+    <link rel="stylesheet" href="css文件.css"/>
+</head>
+<body style="height: 3000px">
+css选择器：
+选择器{css属性名:属性值;}
+css每个属性之间都要用;隔开
+除了行内式以外 内嵌式和外链式都需要一个css选择器  去指定要操作的元素，给他加css样式
+<div style="width: 100px;"></div>
+
+1、标签选择器
+语法 标签名{css样式}
+<h3>标签选择器</h3>
+<a href="">超链接</a>
+2、类选择器
+语法 .className{}
+<style>
+    .div1{
+        font-size: 26px;
+        color: aqua;
+        background: pink;
+    }
+    .div2{
+        width: 300px;
+        height: 400px;
+        background: blue;
+    }
+    .div3{
+        font-size: 30px;
+        color: orange;
+    }
+</style>
+<div class="div1">div1</div>
+<!--.div2+Tab-->
+<div class="div2">div2</div>
+<div class="div3">div3</div>
+3、id选择器：唯一性  同一个id值在一个文件中只能出现一次
+<!--
+    id  身份证
+    class  名字
+    标签   姓
+-->
+#idName{}
+<div id="div4">div4</div>
+<div id="div41">div41</div>
+<!--#div5+Tab-->
+<div id="div5">div5</div>
+<style>
+    #div4{
+        width: 500px;
+        height: 200px;
+        border: 10px dotted greenyellow;
+        /*
+            dotted 点状线
+            solid  实线
+        */
+    }
+    #div5{
+        font-size: 40px;
+        color: blue;
+    }
+</style>
+4、通配符选择器:选择全部的标签
+*{}
+<style>
+    li{
+        /*color: red;*/
+    }
+    .list2{
+        color: blue;
+    }
+    #list3{
+        font-size: 30px;
+    }
+
+</style>
+<ul>
+    <li>选项</li>
+    <li class="list2">选项</li>
+    <li id="list3">选项</li>
+    <li>选项</li>
+    <li>选项</li>
+</ul>
+
+其他选择器
+5、类型选择器
+<form>
+    <input type="text"/>
+    <input type="password"/>
+    <input type="button" value="普通按钮"/>
+</form>
+<style>
+    /*input[type=text]{*/
+        /*width: 150px;*/
+        /*height: 80px;*/
+        /*border: 10px dotted red;*/
+    /*}*/
+    input[type=password]{
+        border: 10px solid orange;
+        /*边框*/
+        border-radius: 20px;
+        /*边框圆角*/
+    }
+    input[type=button]{
+        width: 100px;
+    }
+</style>
+6、子代选择器
+ul>li
+父级元素 子级元素{}
+<!--ul>li{选项$}*4-->
+<style>
+    ul>li{
+        border: 1px solid blue;
+    }
+    ul li{
+        font-size: 20px;
+        color: plum;
+    }
+    div p{
+        border: 1px solid orange;
+    }
+</style>
+<ul>
+    <li>选项1</li>
+    <li>选项2</li>
+    <li>选项3</li>
+    <li>选项4</li>
+</ul>
+<div>
+    <p>李克强谈提高行政效能  简约治理李克强谈提高行政效能  简约治理李克强谈提高行政效能  简约治理</p>
+</div>
+7、交集选择器:增加权重
+
+<p class="art" id="art1">
+    李克强谈提高行政效能  简约治理李克强谈提高行政效能  简约治理李克强谈提高行政效能  简约治理
+</p>
+<p>
+    李克强谈提高行政效能  简约治理李克强谈提高行政效能  简约治理李克强谈提高行政效能  简约治理
+</p>
+<style>
+    p#art1{
+    /*1+100=101*/
+        color: orange;
+    }
+    p.art{
+        /*1+10=11*/
+        color: red;
+    }
+    p{
+       color: blue;
+    }
+</style>
+           权重
+标签选择器   1
+类选择器     10
+id选择器    100
+
+8、并集选择器：给不同的元素设置相同的样式
+<div class="box1">div1</div>
+<div class="box2">div2</div>
+<style>
+    .box1,.box2{
+        width: 300px;
+        height: 200px;
+        background: yellow;
+        margin: 10px;
+        /*外边距*/
+    }
+</style>
+span.span1
+<span class="span1">span1</span>
+<span class="span2">span2</span>
+<style>
+    .span1,.span2{
+        color: orange;
+        background: gainsboro;
+    }
+</style>
+9、伪类选择器
+<a href="">超链接</a>
+<input type="text"/>
+<style>
+    a:hover{
+        /*鼠标经过时的样式*/
+        color: red;
+    }
+    input[type=text]:focus{
+        /*获取光标时的样式*/
+        border: 5px solid red;
+
+    }
+</style>
+
+</body>
+</html>

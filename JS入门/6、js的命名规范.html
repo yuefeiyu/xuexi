@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>js的命名规范</title>
+</head>
+<body>
+    1、严格区分大小写
+    test Test  他们代表不同的意义
+    a{}   A{} 不区分
+
+    2、遵循驼峰命名法
+    第一个单词首字母小写，其他有意义的单词首字母大写
+    var fontColor=document.getElementById("idName");
+    wenZiYanSe  wzys
+    productList  Product list（错误的）
+    可以使用字母 数字 _ $ 但是数字不能做开头
+    css类名 数字也不可以做开头 并且不可以直接使用纯数字作为类名 id名 变量名、
+
+    3、不能使用关键字和保留字进行命名
+    var if=xxx; 错的
+    JavaScript 保留关键字
+    Javascript 的保留关键字不可以用作变量、标签或者函数名。有些保留关键字是作为 Javascript 以后扩展使用。
+    abstract	arguments	boolean	break	byte
+    case	catch	char	class*	const
+    continue	debugger	default	delete	do
+    double	else	enum*	eval	export*
+    extends*	false	final	finally	float
+    for	function	goto	if	implements
+    import*	in	instanceof	int	interface
+    let	long	native	new	null
+    package	private	protected	public	return
+    short	static	super*	switch	synchronized
+    this	throw	throws	transient	true
+    try	typeof	var	void	volatile
+    while	with	yield
+
+    * 标记的关键字是 ECMAScript5 中新添加的。
+
+</body>
+</html>

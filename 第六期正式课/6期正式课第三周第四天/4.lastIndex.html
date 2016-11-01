@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var str='alpha(opacity:10)';
+    reg=/^alpha\(opacity[=:](\d+)\)$/g;
+    console.log(reg.lastIndex);
+    console.log(reg.test(str));
+    console.log(reg.lastIndex);//正则的懒惰性
+    console.log(reg.exec(str))
+</script>
+</body>
+</html>

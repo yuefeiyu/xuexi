@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    /*清除标签自带的边距*/
+}
+ul{
+    list-style: none;
+}
+img{
+    border: none;
+    width: 230px;
+    height: 230px;
+    display: block;
+}
+a{
+    text-decoration: none;
+    /*清除a标签自带的下划线*/
+}
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+li{
+    width: 230px;
+    border: 1px solid red;
+    float: left;
+    margin-right: 12px;
+}
+.money{
+    margin: 20px 10px 0 12px;
+}
+.money span{
+    color: #999999;
+    float: left;
+}
+.money i{
+    color: #d21623;
+    font-style: normal;
+}
+.money .com{
+    color: #666666;
+    font-size: 14px;
+    float: right;
+}
+.detail{
+    font-size: 12px;
+    color: #666666;
+    margin: 18px 22px 12px 10px;
+}
+.detail span{
+    color: #e4393c;
+}
+.detail i{
+    color: #66667d;
+    font-style: normal;
+}

@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.clearfix:before,.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.box{
+    width: 1226px;
+    margin: 0 auto;
+}
+.footNav{
+    padding-top: 27px;
+    padding-bottom: 27px;
+    border-bottom: 1px solid #000;
+}
+.footNav li{
+    float: left;
+    height: 25px;
+    border-right: 1px solid #000000;
+    padding: 0 53px;
+}
+.footNav li a{
+    color: #616161;
+    font-size: 16px;
+}
+.footNav li a span{
+    background: url("miicon_01.png") no-repeat;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.footNav li a .icon2{
+    background-position:-37px 0 ;
+}
+.footNav li a .icon3{
+    background-position: -106px 0;
+}
+.footNav li a .icon4{
+    background-position: -141px 0;
+}
+.footNav li a .icon5{
+    background-position: -77px 0;
+}
+.footNav .noBor{
+    border: none;
+}
+.footNav li a:hover{
+    color: #ff6700;
+}
+.footNav li a:hover .icon1{
+    background-position:0 -31px ;
+}
+.footNav li a:hover .icon2{
+    background-position:-37px -31px;
+}
+.footNav li a:hover .icon3{
+    background-position: -106px -31px;
+}
+.footNav li a:hover .icon4{
+    background-position: -141px -30px;
+}
+.footNav li a:hover .icon5{
+    background-position: -78px -30px;
+}
+.footInfo{
+    margin-top: 40px;
+}
+.footInfo dl{
+    float: left;
+    margin-right: 103px;
+}
+.footInfo dt{
+    color: #424242;
+    font-size: 14px;
+    padding-bottom: 23px;
+}
+.footInfo dd a{
+    font-size: 12px;
+    color: #757575;
+    line-height: 27px;
+}
+.footInfo dd a:hover{
+    color: #ff6700;
+}
+.footInfo .marR{
+    margin-right: 78px;
+}
+.InfoR{
+    float: left;
+    text-align: center;
+    border-left: 1px solid #000;
+    width: 200px;
+    padding-left: 50px;
+}
+.InfoR .phone{
+    font-size: 22px;
+    color: #ff6700;
+    width: 138px;
+    margin-left: -7px;
+
+}
+.InfoR .time{
+    font-size: 12px;
+    color: #616161;
+    line-height: 18px;
+    text-align: center;
+    width: 122px;
+}
+.InfoR .btn{
+    width: 118px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #ff6700;
+    margin-top: 17px;
+
+}
+
+.InfoR .btn a{
+    color: #ff6700;
+    font-size: 12px;
+}
+.InfoR .btn a span{
+    background: url("mess.png") no-repeat;
+    width: 12px;
+    height: 11px;
+    display: inline-block;
+    vertical-align: -1px;
+}
+.InfoR .btn:hover{
+    background: #f25807;
+}
+.InfoR .btn:hover a{
+    color: #fbf4ff;
+}
+.InfoR .btn:hover a span{
+    background-position: -17px 0;
+}

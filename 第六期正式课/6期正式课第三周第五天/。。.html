@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #div1{
+            width: 100px;
+            height: 100px;
+            background: green;
+            top: 0;
+            position: absolute;
+            left:300px;
+        }
+        #target{
+            width: 1px;
+            height: 200px;
+            left: 1000px;
+            top: 0;
+            position: absolute;
+            background: red;
+        }
+    </style>
+
+</head>
+<body>
+<div id="div1"></div>
+<div id="target"></div>
+<script src="utils.js"></script>
+<script>
+//    var oDiv=document.getElementById('div1')
+//    var zLc=1000
+//    var zSj=1000
+//    var pL=10
+//    var step=zLc/zSj*pL
+//    var timer=setInterval(function(){
+//        var curleft=utils.css(oDiv,'left')
+//        if(curleft+step>=zLc){
+//            utils.css(oDiv,'left',zLc)
+//            utils.css(oDiv,{
+//                background:'red'
+//            })
+//            clearInterval(timer)
+//            return
+//        }
+//        curleft+=step
+//        utils.css(oDiv,'left',curleft)
+//    },pL)
+    function Linear(t,b,c,d){
+        return t/d*c+b
+    }
+    var  oDiv=document.getElementById('div1')
+    var beginLeft=utils.css(oDiv,'left'),beginTop=utils.css(oDiv,'top')
+    var targetLeft=1500,targetTop=1000
+    var changeLeft=targetLeft-beginLeft,changeTop=targetTop-beginLeft
+    var duration=1000;
+    var time=null
+    var timer=setInterval(function(){
+        time+=10
+        if(time>=duration){utils.css(oDiv,{
+            left:targetLeft,
+            background:'blue'
+        })
+            clearInterval(timer)
+            return
+        }
+        var curleft=Linear(time,beginLeft,changeLeft,duration)
+        var curTop=Linear(time,beginTop,changeTop,duration)
+        utils.css(oDiv,{
+            left:curleft,
+            top:curTop
+        })
+    },10)
+
+
+</script>
+</body>
+</html>

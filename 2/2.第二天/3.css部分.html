@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- 引入外部的css文件  外链式-->
+    <link rel="stylesheet" href="style.css"/>
+    <!--link+Tab-->
+    <style>
+        p{
+            font-size: 40px;
+            color: green;
+        }
+    </style>
+
+</head>
+<body>
+css 层叠样式表
+作用：美化页面，调整页面的布局
+html和css分离，有利后期维护
+css引入方式：
+1、行内式：通过标签属性style 去设置css样式
+<p style="width: 100px;height: 300px;background: white">百度表示坚决落实国家网信办联合调查组整改要求</p>
+css属性  属性名:属性值;
+每个css属性之间要用分号隔开
+<p style="color: red;border: 1px solid blue">
+    javascript培训,js培训,HTML5培训,css培训,前端开发培训,node.js培训,nodeJS培训,移动端培训,北京珠峰培训
+</p>
+2、内嵌式
+<p>百度表示坚决落实国家网信办联合调查组整改要求</p>
+css引入方式的权重
+行内式>内嵌式
+行内式>外链式
+就近原则：哪个css样式距离标签最近  用谁的样式
+
+（相同的css样式 作用在同一元素上）
+3、外链式：通过link标签去引入外部的css文件
+<p style="color: plum">百度表示坚决落实国家网信办联合调查组整改要求</p>
+
+
+
+
+
+
+</body>
+</html>

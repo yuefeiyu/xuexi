@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        /*@import url();*/
+        p{
+            width: 300px;
+            height: 200px;
+            background-color: pink;
+        }
+        /*为什么style标签不放在body中 先加载样式 再加载结构 避免出现页面的排版错乱*/
+    </style>
+    <link rel="stylesheet" href="css文件的路径" type="text/css"/>
+    <!--
+    导入式  @import "文件路径"; 写在css文件中 不是写在html文件中
+
+    -->
+</head>
+<body>
+<div style="width: 200px;height: 200px;background-color: #000;"></div>
+<!--style 样式 还是一个标签属性 -->
+<p>
+    我是一个段落
+</p>
+</body>
+</html>

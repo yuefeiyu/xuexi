@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="box">
+    <div class="box1 box2 box3      box4"></div>
+    <div class="box1 box2 box3"></div>
+    <div class="box1 box2"></div>
+    <div class="box1"></div>
+</div>
+<script>
+    var oBox=document.getElementById('box');
+    var aDiv=oBox.getElementsByTagName('div');
+    //getByClass:在一定的范围下，通过class名来获取一组元素
+    //参数：context，strClass 返回值：ary
+    //高级浏览器系统提供：context.getElementsByClassName
+    // 不兼容IE 6-8
+    // 1.把字符串切成数aryClass；'box1   box2   box3     '去掉首尾空格，中间按空格切分
+    //2.获取context下所有的元素标签 ByTagName('*')
+    //3.验证每个标签上是否包含aryClass中的每一项
+    function getByClass(strClass,curEle){
+         curEle=curEle||document;
+        //高级浏览器-有系统提供的方法
+        if('getComputedStyle' in window){
+            return Array.prototype.slice.call(curEle.getElementsByClassName(strClass))
+        }
+        //低级浏览器的兼容处理
+        var ary=[];
+        var aryClass=strClass.replace(/(^ +)|( +$)/g,'').split(/\s+/g);
+        var nodeList=curEle.getElementsByTagName('*');
+        for(var i=0; i<nodeList.length; i++){
+            var curNode=nodeList[i];
+            var bOk=true;
+            for(var k=0; k<aryClass.length; k++){
+                var curClass=aryClass[k];
+                var reg=new RegExp('\\b'+curClass+'\\b')
+                if(!reg.test(curNode.className)){
+                    bOk=false;
+                    break;
+                }
+            }
+            if(bOk){
+                ary.push(curNode)
+            }
+        }
+        return ary;
+    }
+    //hasClass: 验证元素的className上是否有某个class名？'    box1    '
+    //参数： 元素 单个class名
+    //返回值：布尔值
+    function hasClass(curEle,cName){
+        //去除字符串的首尾空格
+        cName=cName.replace(/(^ +)|( +$)/g,'');
+        //验证是否存在某个class名的正则；
+        var reg=new RegExp('\\b'+cName+'\\b');
+        //返回布尔值--验证结果
+        return reg.test(curEle.className);
+    }
+    //addClass:元素的className上如果每个这个class名，才会添加 ‘box1   box2    ’
+    //参数2个： 元素 strClass
+    //返回值：没有返回值
+    /*
+    * 1.把字符串strClass切成数组aryClass;
+    * 2.遍历aryClass数组中的每一项，验证元素的class名上是否有这个aryClass数组中的每一项，如果没有，才给元素上添加；
+    * */
+    function addClass(curEle,strClass){
+        //1.把字符串strClass切成数组aryClass;
+        var aryClass=strClass.replace(/(^ +)|( +$)/g,'').split(/\s+/g);
+        //2.遍历aryClass数组中的每一项，验证元素的class名上是否有这个aryClass数组中的每一项，如果没有，才给元素上添加；
+        for(var i=0; i<aryClass.length; i++){
+            if(!hasClass(curEle,aryClass[i])){
+                curEle.className+=' '+aryClass[i];
+            }
+        }
+    }
+    //removeClass:元素身上如果有这个class名就删除
+    //参数2个：元素 strClass   '   box1   str5     '
+    //没有返回值
+    //1.切数组
+    //2.遍历数组中的每一项； 如果元素身上有了，就删除；
+    function removeClass(curEle,strClass){
+        //1.切数组
+        var aryClass=strClass.replace(/(^\s+)|(\s+$)/g,'').split(/\s+/g);
+        //2.遍历数组中的每一项； 如果元素身上有了，就删除；
+        for(var i=0; i<aryClass.length; i++){
+            var reg=new RegExp('\\b'+aryClass[i]+'\\b')
+            if(hasClass(curEle,aryClass[i])){
+                curEle.className=curEle.className.replace(reg,' ').replace(/\s+/g,' ').replace(/(^ +)|( +$)/g,'');
+            }
+        }
+    }
+    removeClass(aDiv[0],'box1     box3    ');
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

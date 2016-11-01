@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        div{
+            padding:20px;
+        }
+        #div1{
+            width: 450px;
+            height: 450px;
+            border: 10px solid green;
+            margin:50px auto;
+        }
+        #div2{
+            width: 300px;
+            height: 300px;
+            border: 10px solid red;
+            /*position: absolute;*/
+        }
+        #div3{
+            width: 200px;
+            height: 200px;
+            border: 10px solid blue;
+        }
+    </style>
+</head>
+<body id="body">
+<div id="div1">
+    div1
+    <div id="div2">
+        div2
+        <div id="div3">
+            div3
+        </div>
+    </div>
+</div>
+<script>
+    //需求：求div3的结构父级，最大能到谁，用代码来实现
+    var oDiv3=document.getElementById('div3');
+    //求结构父级的最大值
+    /*var par=oDiv3.parentNode;
+    while(par){
+        alert(par)
+        par=par.parentNode;
+    }*/
+    //求定位父级的最大值
+    /*var par=oDiv3.offsetParent;
+    while(par){
+        alert(par.id);
+        par=par.offsetParent;
+    }*/
+    console.log(oDiv3.offsetLeft)
+
+
+
+
+
+
+</script>
+</body>
+</html>

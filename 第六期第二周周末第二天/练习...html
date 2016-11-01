@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function sJs(n, m) {
+        n = Number(n);
+        m = Number(m);
+        if (isNaN(n) || isNaN(m)) {
+            return Math.random();
+        }
+        if (n > m) {
+            var tmp = n;
+            n = m;
+            m = tmp;
+        }
+        return Math.round(Math.random() * (m - n) + n)
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .parent{
+            width: 300px;
+            height: 300px;
+            background: red;
+        }
+        .child{
+            width: 100px;
+            height: 100px;
+            background: black;
+        }
+    </style>
+</head>
+<body>
+<div class="parent" style="display: none">
+    <div class="child" style="display: block"></div>
+</div>
+<div class="parent" style="background: yellow;visibility: hidden">
+    <div class="child" style="visibility: visible"></div>
+    <!--
+    visibility: hidden 隐藏
+    visibility: visible可见
+    -->
+</div>
+
+</body>
+</html>
